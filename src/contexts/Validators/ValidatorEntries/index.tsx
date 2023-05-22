@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: GPL-3.0-only
 
-import { greaterThanZero, rmCommas, shuffle } from '@polkadot-cloud/utils';
+import { rmCommas, shuffle } from '@polkadot-cloud/utils';
 import BigNumber from 'bignumber.js';
 import React, { useEffect, useRef, useState } from 'react';
 import { ValidatorCommunity } from '@polkadot-cloud/assets/validators';
@@ -43,9 +43,8 @@ export const ValidatorsProvider = ({
   const { stakers } = useStaking().eraStakers;
   const { poolNominations } = useActivePools();
   const { activeAccount } = useActiveAccounts();
-  const { activeEra, metrics } = useNetworkMetrics();
+  const { activeEra } = useNetworkMetrics();
   const { bondedAccounts, getAccountNominations } = useBonded();
-  const { earliestStoredSession } = metrics;
 
   // Stores all validator entries.
   const [validators, setValidators] = useState<Validator[]>([]);
@@ -339,18 +338,6 @@ export const ValidatorsProvider = ({
     setSessionValidators(sessionValidatorsRaw.toHuman());
   };
 
-  // Subscribe to active parachain validators.
-  const subscribeParachainValidators = async () => {
-    if (!api || !isReady) return;
-    const unsub: AnyApi = await api.query.paraSessionInfo.accountKeys(
-      earliestStoredSession.toString(),
-      (v: AnyApi) => {
-        setSessionParaValidators(v.toHuman());
-        sessionParaUnsub.current = unsub;
-      }
-    );
-  };
-
   // Fetches prefs for a list of validators.
   const fetchValidatorPrefs = async (addresses: ValidatorAddresses) => {
     if (!addresses.length || !api) return null;
@@ -541,12 +528,6 @@ export const ValidatorsProvider = ({
     if (isReady && Object.values(erasRewardPoints).length)
       calculateEraPointsBoundaries();
   }, [isReady, erasRewardPoints]);
-
-  // Fetch parachain session validators when `earliestStoredSession` ready.
-  useEffectIgnoreInitial(() => {
-    if (isReady && greaterThanZero(earliestStoredSession))
-      subscribeParachainValidators();
-  }, [isReady, earliestStoredSession]);
 
   // Fetch active account's nominations in validator list format.
   useEffectIgnoreInitial(() => {
