@@ -118,7 +118,7 @@ export const ManageFastUnstake = () => {
         `${t('noEnough')} ${planckToUnit(
           fastUnstakeDeposit,
           units
-        ).toString()} ${unit}`
+        ).toFixed()} ${unit}`
       );
     }
 
@@ -180,7 +180,7 @@ export const ManageFastUnstake = () => {
                   <p>
                     <>
                       {t('registerFastUnstake')}{' '}
-                      {planckToUnit(fastUnstakeDeposit, units).toString()}{' '}
+                      {planckToUnit(fastUnstakeDeposit, units).toFixed()}{' '}
                       {unit}. {t('fastUnstakeOnceRegistered')}
                     </>
                   </p>

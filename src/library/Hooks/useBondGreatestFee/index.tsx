@@ -41,7 +41,7 @@ export const useBondGreatestFee = ({ bondFor }: Props) => {
     const bond = BigNumber.max(
       transferrableBalance.minus(feeReserve),
       0
-    ).toString();
+    ).toFixed();
 
     let tx = null;
     if (!api) {

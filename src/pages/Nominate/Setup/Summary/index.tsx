@@ -54,7 +54,7 @@ export const Summary = ({ section }: SetupStepProps) => {
         : payee.destination;
 
     const bondToSubmit = unitToPlanck(bond, units);
-    const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toString();
+    const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toFixed();
 
     const txs = [
       api.tx.staking.bond(bondAsString, payeeToSubmit),

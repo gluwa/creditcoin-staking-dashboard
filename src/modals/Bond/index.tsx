@@ -60,7 +60,7 @@ export const Bond = () => {
 
   // local bond value.
   const [bond, setBond] = useState<{ bond: string }>({
-    bond: freeToBond.toString(),
+    bond: freeToBond.toFixed(),
   });
 
   // bond valid.
@@ -88,8 +88,8 @@ export const Bond = () => {
 
   // update bond value on task change.
   useEffect(() => {
-    setBond({ bond: freeToBond.toString() });
-  }, [freeToBond.toString()]);
+    setBond({ bond: freeToBond.toFixed() });
+  }, [freeToBond.toFixed()]);
 
   // determine whether this is a pool or staking transaction.
   const determineTx = (bondToSubmit: BigNumber) => {
@@ -102,7 +102,7 @@ export const Bond = () => {
       ? '0'
       : bondToSubmit.isNaN()
       ? '0'
-      : bondToSubmit.toString();
+      : bondToSubmit.toFixed();
 
     if (isPooling) {
       tx = api.tx.nominationPools.bondExtra({

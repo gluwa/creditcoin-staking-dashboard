@@ -64,7 +64,7 @@ export const LeavePool = ({ setSection }: any) => {
 
   // local bond value
   const [bond, setBond] = useState<{ bond: string }>({
-    bond: freeToUnbond.toString(),
+    bond: freeToUnbond.toFixed(),
   });
 
   // bond valid
@@ -75,9 +75,9 @@ export const LeavePool = ({ setSection }: any) => {
 
   // update bond value on task change
   useEffect(() => {
-    setBond({ bond: freeToUnbond.toString() });
+    setBond({ bond: freeToUnbond.toFixed() });
     setBondValid(isValid);
-  }, [freeToUnbond.toString(), isValid]);
+  }, [freeToUnbond.toFixed(), isValid]);
 
   // modal resize on form update
   useEffect(() => setModalResize(), [bond]);
@@ -90,7 +90,7 @@ export const LeavePool = ({ setSection }: any) => {
     }
 
     const bondToSubmit = unitToPlanck(!bondValid ? '0' : bond.bond, units);
-    const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toString();
+    const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toFixed();
     tx = api.tx.nominationPools.unbond(activeAccount, bondAsString);
     return tx;
   };

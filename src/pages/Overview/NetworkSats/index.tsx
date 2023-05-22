@@ -40,7 +40,7 @@ export const NetworkStats = () => {
     {
       label: t('overview.inflationRate'),
       value: `${
-        totalIssuance.toString() === '0'
+        totalIssuance.toFixed() === '0'
           ? '0'
           : new BigNumber(inflation).decimalPlaces(2).toFormat()
       }%`,
