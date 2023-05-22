@@ -25,7 +25,7 @@ export interface EraStakers {
   activeAccountOwnStake: ActiveAccountOwnStake[];
   activeValidators: number;
   stakers: Staker[];
-  totalActiveNominators: number;
+  totalActiveNominators: number | undefined;
 }
 
 export type NominationStatuses = Record<string, string>;

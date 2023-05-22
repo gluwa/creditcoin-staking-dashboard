@@ -30,7 +30,7 @@ export const defaultEraStakers: EraStakers = {
   activeAccountOwnStake: [],
   activeValidators: 0,
   stakers: [],
-  totalActiveNominators: 0,
+  totalActiveNominators: undefined,
 };
 
 export const defaultTargets: StakingTargets = {

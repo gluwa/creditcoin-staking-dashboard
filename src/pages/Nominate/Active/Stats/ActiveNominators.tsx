@@ -11,13 +11,14 @@ export const ActiveNominatorsStat = () => {
   const { t } = useTranslation('pages');
   const { consts } = useApi();
   const { maxElectingVoters } = consts;
-  const { totalActiveNominators } = useStaking().eraStakers;
+  let { totalActiveNominators } = useStaking().eraStakers;
+  totalActiveNominators = totalActiveNominators ?? 0;
 
   // active nominators as percent
   let totalNominatorsAsPercent = 0;
   if (maxElectingVoters.isGreaterThan(0)) {
     totalNominatorsAsPercent =
-      totalActiveNominators / maxElectingVoters.dividedBy(100).toNumber();
+      totalActiveNominators ?? 0 / maxElectingVoters.dividedBy(100).toNumber();
   }
 
   const params = {
