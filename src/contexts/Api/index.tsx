@@ -169,7 +169,7 @@ export const APIProvider = ({ children, network }: APIProviderProps) => {
       newApi.consts.staking.maxNominations,
       newApi.consts.staking.sessionsPerEra,
       newApi.consts.staking.maxNominatorRewardedPerValidator,
-      newApi.consts.electionProviderMultiPhase.maxElectingVoters,
+      async () => 12_500,
       newApi.consts.babe.expectedBlockTime,
       newApi.consts.babe.epochDuration,
       newApi.consts.balances.existentialDeposit,
