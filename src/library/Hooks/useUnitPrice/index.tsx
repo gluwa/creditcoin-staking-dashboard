@@ -6,6 +6,14 @@ import { ApiEndpoints } from 'consts';
 import { useNetwork } from 'contexts/Network';
 
 export const useUnitPrice = () => {
+  // FIXME: we could maybe make this work with gluwa's api or something
+  return async () => {
+    return {
+      lastPrice: '0',
+      change: '0',
+    }
+  };
+
   const { network } = useNetwork();
 
   const fetchUnitPrice = async () => {
