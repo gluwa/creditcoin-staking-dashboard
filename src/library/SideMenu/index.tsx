@@ -149,12 +149,6 @@ export const SideMenu = () => {
         >
           <CogOutlineSVG width="1.3em" height="1.3em" />
         </button>
-        <button
-          type="button"
-          onClick={() => openModal({ key: 'ChooseLanguage' })}
-        >
-          <LanguageSVG width="1.25em" height="1.25em" />
-        </button>
       </section>
     </Wrapper>
   );
