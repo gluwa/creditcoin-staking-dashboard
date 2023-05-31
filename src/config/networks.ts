@@ -35,7 +35,7 @@ export const NetworkList: Networks = {
         width: '7.2em',
       },
       inline: {
-        svg: CreditcoinLogoSVG,
+        svg: CreditcoinIconSVG,
         size: '1.05em',
       },
     },
