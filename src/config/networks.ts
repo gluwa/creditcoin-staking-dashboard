@@ -2,10 +2,9 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
 import { DefaultParams } from 'consts';
-import PolkadotIconSVG from 'img/polkadot_icon.svg?react';
-import PolkadotInlineSVG from 'img/polkadot_inline.svg?react';
+import CreditcoinIconSVG from 'img/ic_creditcoin.svg?react';
+import CreditcoinLogoSVG from 'img/logo_creditcoin.svg?react';
 
-import { ReactComponent as CreditcoinLogoSVG } from 'img/creditcoin_logo.svg';
 import type { Networks } from 'types';
 
 export const NetworkList: Networks = {
@@ -30,13 +29,13 @@ export const NetworkList: Networks = {
     unit: 'CTC',
     units: 18,
     brand: {
-      icon: PolkadotIconSVG,
+      icon: CreditcoinIconSVG,
       logo: {
         svg: CreditcoinLogoSVG,
         width: '7.2em',
       },
       inline: {
-        svg: PolkadotInlineSVG,
+        svg: CreditcoinLogoSVG,
         size: '1.05em',
       },
     },

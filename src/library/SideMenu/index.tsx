@@ -4,6 +4,9 @@
 import { faCompressAlt, faExpandAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { capitalizeFirstLetter } from '@polkadot-cloud/utils';
+import FeedbackSVG from '../../img/ic_feedback.svg?react';
+import ResourcesSVG from '../../img/ic_resources.svg?react';
+import CreditcoinSVG from '../../img/ic_creditcoin.svg?react';
 import throttle from 'lodash.throttle';
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -84,7 +87,7 @@ export const SideMenu = () => {
           name={t('resources')}
           minimised={sideMenuMinimised}
           icon={{
-            Svg: InfoSVG,
+            Svg: ResourcesSVG,
             size: sideMenuMinimised ? '1.4em' : '1.2em',
           }}
         />
@@ -93,7 +96,7 @@ export const SideMenu = () => {
           name={t('feedback')}
           minimised={sideMenuMinimised}
           icon={{
-            Svg: ForumSVG,
+            Svg: FeedbackSVG,
             size: sideMenuMinimised ? '1.4em' : '1.2em',
           }}
         />
@@ -104,7 +107,7 @@ export const SideMenu = () => {
           name={capitalizeFirstLetter(network)}
           onClick={() => openModal({ key: 'Networks' })}
           icon={{
-            Svg: networkData.brand.inline.svg,
+            Svg: CreditcoinSVG,
             size: networkData.brand.inline.size,
           }}
           minimised={sideMenuMinimised}

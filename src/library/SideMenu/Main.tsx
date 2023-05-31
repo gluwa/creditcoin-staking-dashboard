@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { PageCategories, PagesConfig } from 'config/pages';
-import { PolkadotUrl } from 'consts';
+import { CreditcoinUrl } from 'consts';
 import { useBonded } from 'contexts/Bonded';
 import { usePoolMemberships } from 'contexts/Pools/PoolMemberships';
 import { useSetup } from 'contexts/Setup';
@@ -140,7 +140,7 @@ export const Main = () => {
     <>
       <LogoWrapper
         $minimised={sideMenuMinimised}
-        onClick={() => window.open(PolkadotUrl, '_blank')}
+        onClick={() => window.open(CreditcoinUrl, '_blank')}
       >
         {sideMenuMinimised ? (
           <networkData.brand.icon
@@ -169,14 +169,14 @@ export const Main = () => {
 
             {/* display category links */}
             {pagesToDisplay.map(
-              ({ category, hash, key, lottie, action }: PageItem) => (
+              ({ category, hash, key, icon, action }: PageItem) => (
                 <React.Fragment key={`sidemenu_page_${categoryId}_${key}`}>
                   {category === categoryId && (
                     <Primary
                       name={t(key)}
                       to={hash}
                       active={hash === pathname}
-                      lottie={lottie}
+                      icon={icon}
                       action={action}
                       minimised={sideMenuMinimised}
                     />
