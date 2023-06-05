@@ -47,14 +47,16 @@ export const PayoutLine = ({
 }: PayoutLineProps) => {
   const { t } = useTranslation('library');
   const { mode } = useTheme();
-  const { isSyncing } = useUi();
-  const { inSetup } = useStaking();
   const { payouts, poolClaims } = useSubscan();
-  const { unit, units, colors } = useNetwork().networkData;
+  const { unit, units } = useNetwork().networkData;
   const { membership: poolMembership } = usePoolMemberships();
 
-  const notStaking = !isSyncing && inSetup() && !poolMembership;
-  const poolingOnly = !isSyncing && inSetup() && poolMembership !== null;
+  // Unneeded until Pools are officially supported
+  // const { isSyncing } = useUi();
+  // const { inSetup } = useStaking();
+  // const { membership: poolMembership } = usePoolMemberships();
+  // const notStaking = !isSyncing && inSetup() && !poolMembership;
+  // const poolingOnly = !isSyncing && inSetup() && poolMembership !== null;
 
   // remove slashes from payouts (graph does not support negative values).
   const payoutsNoSlash = payouts.filter(
@@ -88,7 +90,7 @@ export const PayoutLine = ({
   );
 
   // determine color for payouts
-  const color = "#9cffaa";
+  const color = '#9cffaa';
 
   // configure graph options
   const options = {

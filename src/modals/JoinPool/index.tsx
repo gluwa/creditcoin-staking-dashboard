@@ -80,7 +80,7 @@ export const JoinPool = () => {
 
   // tx to submit
   const getTx = () => {
-    let tx = null;
+    const tx = null;
     if (!api) {
       return tx;
     }

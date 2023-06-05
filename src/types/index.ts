@@ -12,7 +12,7 @@ declare global {
   }
 }
 
-export type NetworkName = 'creditcoin';
+export type NetworkName = 'creditcoin' | 'creditcoinDev' | 'creditcoinTest';
 
 export type Networks = Record<string, Network>;
 
