@@ -6,18 +6,18 @@ import { defaultThemeContext } from './defaults';
 import type { Theme, ThemeContextInterface } from './types';
 
 export const ThemesProvider = ({ children }: { children: React.ReactNode }) => {
-    let initialTheme: Theme = 'dark';
+  const initialTheme: Theme = 'dark';
 
-    // get the current theme
-    localStorage.setItem('theme', 'dark');
+  // get the current theme
+  localStorage.setItem('theme', 'dark');
 
-    // the theme mode
-    const [theme, setTheme] = React.useState<Theme>(initialTheme);
-    const themeRef = useRef(theme);
+  // the theme mode
+  const [theme] = React.useState<Theme>(initialTheme);
+  const themeRef = useRef(theme);
 
-    const toggleTheme = (maybeTheme: Theme | null = null): void => {
-        // Do nothing
-    };
+  const toggleTheme = (): void => {
+    // Do nothing
+  };
 
   return (
     <ThemeContext.Provider
@@ -32,6 +32,6 @@ export const ThemesProvider = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const ThemeContext =
-    React.createContext<ThemeContextInterface>(defaultThemeContext);
+  React.createContext<ThemeContextInterface>(defaultThemeContext);
 
 export const useTheme = () => React.useContext(ThemeContext);
