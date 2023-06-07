@@ -1,54 +1,76 @@
-[![Polkadot - App](https://img.shields.io/badge/Polkadot-App-E6007A?logo=polkadot&logoColor=E6007A)](https://staking.polkadot.network) ![ci](https://github.com/paritytech/polkadot-staking-dashboard/actions/workflows/ci.yml/badge.svg) [![License](https://img.shields.io/badge/License-GPL3.0-blue.svg)](https://opensource.org/licenses/GPL-3.0)
+![ci](https://github.com/gluwa/creditcoin-staking-dashboard/actions/workflows/ci.yml/badge.svg) [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# Polkadot Staking Dashboard
+# Creditcoin Staking Dashboard
 
-<img width="1727" alt="Screenshot 2023-08-29 at 18 54 33" src="https://github.com/paritytech/polkadot-staking-dashboard/assets/13929023/6291d682-0434-4b77-b6e9-383d277893b0">
+#### Staging (Latest Version):
 
-## Contributing Community Assets
+https://staking-dashboard-test-app.azurewebsites.net
 
-The Polkadot Staking Dashboard is a community-driven project, and we welcome contributions to bolster the dashboard's functionality and features.
+#### Production:
 
-- **Web Extensions**: Submit PR to the [Polkadot Cloud repository](https://github.com/paritytech/polkadot-cloud/tree/main/packages/assets#adding-web-extension-wallets) to add a web extension. The extension will then be available in the `@polkadot-cloud/assets` NPM package. Full instructions can be found [here](https://github.com/paritytech/polkadot-cloud/tree/main/packages/assets#adding-web-extension-wallets).
+https://staking.creditcoin.org
 
-- **Validator Operators**: Submit PR to the [Polkadot Cloud repository](https://github.com/paritytech/polkadot-cloud/tree/main/packages/assets#adding-validator-operators) to add a validator operator. The operator will then be available in the `@polkadot-cloud/assets` NPM package. Full instructions can be found [here](https://github.com/paritytech/polkadot-cloud/tree/main/packages/assets#adding-validator-operators).
 
-## URL Variable Support
+## Validator Operator Setup Guide
 
-Polkadot Staking Dashboard supports URL variables that can be used to direct users to specific configurations of the app, such as landing on a specific language or on a specific network. Variables are added at the end of the hash portion of URL.
+Validator operators can add their contact information, icon, and which validators they operate, to the dashboard’s Community section. The Community feature is designed to give non-biased exposure to validator operators, and to host a fully-featured validator browser just for that operator's validators.
 
-The currently supported URL variables are as follows:
+To add an operator, submit a PR with the following changes:
 
-- **n**: Controls the default network to connect to upon visiting the dashboard. Supported values are `polkadot`, `kusama` and `westend`.
-- **l**: Controls the default to use upon visiting the dashboard. Supported values are `en` and `cn`.
-- **a**: Controls the account to connect to upon visiting the dashboard. Ignored if the account is not present in the initial imported accounts.
+- **Thumbnail:** Add your operator's thumbnail as an SVG Component in [this folder](https://github.com/gluwa/creditcoin-staking-dashboard/tree/main/src/config/validators/thumbnails).
+- **Operator details:** Add your operator details to the `VALIDATORS_COMMUNITY`JSON object in [this file](https://github.com/gluwa/creditcoin-staking-dashboard/blob/main/src/config/validators/index.ts).
 
-URL variables take precedence over saved values in local storage, and will overwrite current configurations. URL variables will update (if present) as a user switches configurations in-app, such as changing the network or language.
+### Operator Structure
 
-### Example URL:
+The following table outlines the structure of a `ValidatorCommunity` entry:
 
-The following URL will load Kusama and use the Chinese localisation resource:
+| Element        | Key          | Required | Notes                                                                                       | Example                                                 |
+| -------------- | ------------ | -------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Operator Name  | `name`       | Yes      | The chosen name of the operator.                                                            | `Validator Central`                                     |
+| Thumbnail Name | `thumbnail`  | Yes      | The name of your SVG component representing your thumbnail.                                 | _See Below_                                             |
+| Bio            | `bio`        | No       | A short description of your entity. Maximum 300 characters.                                 | `Summing up my validator identity in a sentence or so.` |
+| Email Address  | `email`      | No       | A public email address representing the operator.                                           | `validatorcentral@parity.io`                            |
+| Twitter Handle | `twitter`    | No       | The Twitter handle representing the operator.                                               | `@ParityTech`                                           |
+| Website URL    | `website`    | No       | A live and vlid secure URL to your website.                                                 | `https://parity.io`                                     |
+| Validator List | `validators` | Yes      | A list of validators grouped by network. At least 1 validator in 1 network must be defined. | _See Below_                                             |
+
+### Example Operator
+
+Upload your SVG icon as a React component. Look at the existing icons as examples, or use the [SVGR Playground](https://react-svgr.com/playground/) to convert your raw SVG file into a component.
+
+Next, add your operator details to the `ValidatorCommunity` object. Only provide the validator(s) for the particular network(s) you are operating in.
+
+The following example defines 2 validators on the Creditcoin Mainnet, and 1 on the Creditcoin Testnet:
 
 ```
-staking.polkadot.network/#/overview?n=kusama&l=cn
+export const ValidatorCommunity = [
+  ...
+  {
+    name: 'Validator Central',
+    thumbnail: 'ValidatorCentral',
+    bio: 'Summing up my validator identity in a sentence or so. Maximum 300 characters.',
+    email: 'validatorcentral@parity.io',
+    twitter: '@ParityTech',
+    website: 'https://parity.io',
+    validators: {
+      creditcoin: [
+      '1hYiMW8KSfUYChzCQSPGXvMSyKVqmyvMXqohjKr3oU5PCXF',
+      '14QSBoJMHF2Zn2XEoLNSeWgqBRr8XoKPy4BxToD6yLSeFFYe'
+      ],
+      creditcoinTest: ['FykhnPA3pn269LAcQ8VQKDgUQ8ieAaSLwJDhAVhu3dcokVR'],
+    },
+  },
+  ...
+];
+
 ```
 
-## Using Containers
+### General Requirements
 
-You may build a container using:
+| Requirement | Notes                                                                                                                                                                                             |
+| ----------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Accuracy    | Operator contact details must be working and valid.                                                                                                                                               |
+| Liveness    | All submitted validator addresses must be discoverable as a validator on the network in question - whether Mainnet or Testnet.                                                                    |
+| Ordering    | Please place your operator in alphabetical order within `ValidatorCommunity`. Operators are shuffled before being displayed in the dashboard, removing any bias associated with ordering methods. |
 
-```
-./shell/build-container.sh
-```
-
-Then run your container with:
-
-```
-podman run --d -p 8080:80 localhost/polkadot-staking-dashboard
-```
-
-And access the **Staking Dashboard** at http://localhost:8080/.
-
-## Presentations
-
-- 29/06/2023: [[Video] Polkadot Decoded 2023: The Next Step of the Polkadot UX Journey](https://www.youtube.com/watch?v=s78SZZ_ZA64)
-- 30/06/2022: [[Video] Polkadot Decoded 2022: Polkadot Staking Dashboard Demo](https://youtu.be/H1WGu6mf1Ls)
+Please submit an issue for any queries around adding your operator details.
