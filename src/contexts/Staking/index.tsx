@@ -195,7 +195,7 @@ export const StakingProvider = ({
 
   // Fetches erasStakers exposures for an era, and saves to `localStorage`.
   const fetchEraStakers = async (era: string) => {
-    if (!isReady || activeEra.index.isZero() || !api) return [];
+    if (!isReady || activeEra.isPlaceholder || !api) return [];
 
     let exposures: Exposure[] = [];
     const localExposures = getLocalEraExposures(
