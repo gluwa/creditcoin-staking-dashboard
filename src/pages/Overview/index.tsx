@@ -87,7 +87,6 @@ export const Overview = () => {
         <RowSection secondary>
           <CardWrapper height={PAYOUTS_HEIGHT}>
             <BalanceChart />
-            <BalanceLinks />
           </CardWrapper>
         </RowSection>
         <RowSection hLast vLast>
