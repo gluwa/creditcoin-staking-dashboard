@@ -66,11 +66,7 @@ export const useFetchMehods = () => {
     let filtered = Object.assign(validators);
 
     // filter validators to find active candidates
-    filtered = applyFilter(
-      ['active'],
-      ['all_commission', 'blocked_nominations', 'missing_identity'],
-      filtered
-    );
+    filtered = applyFilter(['active'], [], filtered);
 
     // order validators to find profitable candidates
     filtered = applyOrder('low_commission', filtered);
@@ -98,19 +94,14 @@ export const useFetchMehods = () => {
     // filter validators to find waiting candidates
     waiting = applyFilter(
       null,
-      [
-        'all_commission',
-        'blocked_nominations',
-        'missing_identity',
-        'in_session',
-      ],
+      [],
       waiting
     );
 
     // filter validators to find active candidates
     active = applyFilter(
       ['active'],
-      ['all_commission', 'blocked_nominations', 'missing_identity'],
+      [],
       active
     );
 
@@ -138,12 +129,7 @@ export const useFetchMehods = () => {
     const parachainActive =
       applyFilter(
         ['active'],
-        [
-          'all_commission',
-          'blocked_nominations',
-          'missing_identity',
-          'not_parachain_validator',
-        ],
+        ['not_parachain_validator'],
         all
       ).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
@@ -152,7 +138,7 @@ export const useFetchMehods = () => {
     const active =
       applyFilter(
         ['active'],
-        ['all_commission', 'blocked_nominations', 'missing_identity'],
+        [],
         all
       ).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
@@ -166,7 +152,7 @@ export const useFetchMehods = () => {
     const random =
       applyFilter(
         null,
-        ['all_commission', 'blocked_nominations', 'missing_identity'],
+        [],
         all
       ).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
