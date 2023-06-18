@@ -72,7 +72,6 @@ export const CardHeaderWrapper = styled.div<CardHeaderWrapperProps>`
  * Used to separate the main modules throughout the app.
  */
 export const CardWrapper = styled.div<CardWrapperProps>`
-  box-shadow: var(--card-shadow);
   background: var(--background-primary);
   border-radius: 1.1rem;
   display: flex;
