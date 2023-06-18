@@ -43,7 +43,7 @@ export const Wrapper = styled.div<{ $isAddress?: boolean }>`
 
     .text {
       padding-left: ${(props) => (props.$isAddress ? '3rem' : 0)};
-      font-family: InterBold, sans-serif;
+      font-family: 'SF-Pro-SB', sans-serif;
       color: var(--text-color-primary);
       padding-top: 0.25rem;
       position: absolute;

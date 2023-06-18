@@ -21,7 +21,7 @@ export const AccountWrapper = styled.div`
   > div {
     background: var(--button-primary-background);
     color: var(--text-color-primary);
-    font-family: InterSemiBold, sans-serif;
+    font-family: 'SF-Pro-SB', sans-serif;
     border: 1px solid transparent;
     display: flex;
     align-items: flex-start;
@@ -76,6 +76,7 @@ export const AccountWrapper = styled.div`
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            color: #fff;
 
             > span {
               opacity: 0.7;
