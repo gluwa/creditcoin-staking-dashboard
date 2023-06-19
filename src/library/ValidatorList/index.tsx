@@ -304,7 +304,7 @@ export const ValidatorListInner = ({
   // List ui changes / validator changes trigger re-render of list.
   useEffect(() => {
     if (allowFilters && fetched) handleValidatorsFilterUpdate();
-  }, [order, isSyncing, includes, excludes]);
+  }, [order, isSyncing, includes?.length, excludes?.length]);
 
   // Handle modal resize on list format change.
   useEffect(() => {
