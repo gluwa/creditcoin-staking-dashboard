@@ -120,7 +120,9 @@ export const useFetchMehods = () => {
       active = shuffle(active).slice(0, 14);
     }
 
-    return shuffle(waiting.concat(active));
+    return shuffle([
+      ...new Set(waiting.concat(active)),
+    ]);
   };
 
   const available = (nominations: Validator[]) => {
