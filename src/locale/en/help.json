@@ -398,10 +398,11 @@
       "howToUse": "How to Use the Staking Dashboard: Overview",
       "rebonding": "Rebonding",
       "stakeDot": "Staking your CTC",
-      "unbondingTokens": "Unbonding Your Tokens"
+      "unbondingTokens": "Unbonding Your Tokens",
+      "creditcoinDocs": "Link to Creditcoin documentation"
     },
     "modal": {
-      "articles": "Articles",
+      "docs": "Documentation",
       "close": "Close",
       "definitions": "Definitions",
       "helpResources": "Help Resources",
