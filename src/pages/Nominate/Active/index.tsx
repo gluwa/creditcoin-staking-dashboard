@@ -39,7 +39,7 @@ export const Active = () => {
   const { openCanvas } = useOverlay().canvas;
   const { activeAccount } = useActiveAccounts();
 
-  const ROW_HEIGHT = 300;
+  const ROW_HEIGHT = 210;
 
   return (
     <>
