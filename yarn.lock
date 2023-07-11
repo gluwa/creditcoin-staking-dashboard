@@ -6146,7 +6146,7 @@ __metadata:
     lodash.throttle: ^4.1.1
     prettier: ^2.8.8
     prettier-plugin-organize-imports: ^3.2.2
-    rc-slider: ^10.1.1
+    rc-slider: ^10.2.1
     react: ^18.2.0
     react-chartjs-2: ^5.2.0
     react-dom: ^18.2.0
@@ -6313,9 +6313,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-slider@npm:^10.1.1":
-  version: 10.1.1
-  resolution: "rc-slider@npm:10.1.1"
+"rc-slider@npm:^10.2.1":
+  version: 10.2.1
+  resolution: "rc-slider@npm:10.2.1"
   dependencies:
     "@babel/runtime": ^7.10.1
     classnames: ^2.2.5
@@ -6323,7 +6323,7 @@ __metadata:
   peerDependencies:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
-  checksum: 8df66142f1be00d31aaa45f3cf266fa30d03b70c74c734502389bbfacdb6741e149cd36dc1d3557d9dbb0194ed2733748366d888651d1120098338086419ba2c
+  checksum: 565eb55302c776a7a48bfbe6761f52bab6b0d3ea4f53fc10d32ae9958340708bc5072a9c254bb5ddfa822492093032b94cb03d5e52cdff774e076b90e20b9145
   languageName: node
   linkType: hard
 
