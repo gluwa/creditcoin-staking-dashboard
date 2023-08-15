@@ -58,7 +58,6 @@ export interface ExtensionsContextInterface {
   setExtensionStatus: (id: string, s: string) => void;
   setExtensionsFetched: (s: boolean) => void;
   setExtensions: (s: ExtensionInjected[]) => void;
-  resetExtensions: () => void;
 }
 
 export type ExtensionsStatus = Record<string, string>;

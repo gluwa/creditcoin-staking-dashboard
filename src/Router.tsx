@@ -4,7 +4,6 @@
 import { Body, Main, Page, Side } from '@polkadotcloud/core-ui';
 import { PagesConfig } from 'config/pages';
 import { useApi } from 'contexts/Api';
-import { useBonded } from 'contexts/Bonded';
 import { useUi } from 'contexts/UI';
 import { AnimatePresence } from 'framer-motion';
 import { ErrorFallbackApp, ErrorFallbackRoutes } from 'library/ErrorBoundary';
@@ -34,7 +33,6 @@ export const RouterInner = () => {
   const { pathname } = useLocation();
   const { network } = useApi();
   const { sideMenuOpen, sideMenuMinimised, setContainerRefs } = useUi();
-  const { bondedAccounts } = useBonded();
 
   // scroll to top of the window on every page change or network change.
   useEffect(() => {

@@ -98,10 +98,6 @@ export const ExtensionsProvider = ({
     return installed;
   };
 
-  const resetExtensions = () => {
-    setExtensions(getInstalledExtensions());
-  };
-
   return (
     <ExtensionsContext.Provider
       value={{
@@ -112,7 +108,6 @@ export const ExtensionsProvider = ({
         extensionsFetched,
         setExtensionsFetched,
         setExtensions,
-        resetExtensions,
       }}
     >
       {children}
