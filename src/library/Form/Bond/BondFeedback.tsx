@@ -133,12 +133,16 @@ export const BondFeedback = ({
     }
 
     // bond amount must not be smaller than 1 planck
-    if (bond.bond !== '' && bondBn.isLessThan(1)) {
+    if (bond.bond !== '' && bondBn.isLessThan(1) && !bondBn.isNegative()) {
       newErrors.push(t('tooSmall'));
     }
 
     // check bond after transaction fees is still valid
-    if (bond.bond !== '' && bondAfterTxFees.isLessThan(0)) {
+    if (
+      bond.bond !== '' &&
+      bondAfterTxFees.isLessThan(0) &&
+      !bondBn.isNegative()
+    ) {
       newErrors.push(`${t('notEnoughAfter', { unit })}`);
     }
 

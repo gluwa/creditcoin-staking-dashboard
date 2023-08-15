@@ -14,4 +14,5 @@ export const defaultExtensionsContext: ExtensionsContextInterface = {
   setExtensionsFetched: (s) => {},
   // eslint-disable-next-line
   setExtensions: (s) => {},
+  resetExtensions: () => {},
 };
