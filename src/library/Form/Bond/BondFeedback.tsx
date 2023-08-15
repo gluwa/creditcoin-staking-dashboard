@@ -133,7 +133,7 @@ export const BondFeedback = ({
     }
 
     // bond amount must not be smaller than 1 planck
-    if (bond.bond !== '' && bondBn.isLessThan(1) && !bondBn.isNegative()) {
+    if (bond.bond !== '' && bondBn.isLessThan(1)) {
       newErrors.push(t('tooSmall'));
     }
 
