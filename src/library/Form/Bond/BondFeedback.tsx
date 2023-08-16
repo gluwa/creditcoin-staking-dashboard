@@ -140,8 +140,7 @@ export const BondFeedback = ({
     // check bond after transaction fees is still valid
     if (
       bond.bond !== '' &&
-      bondAfterTxFees.isLessThan(0) &&
-      !bondBn.isNegative()
+      bondAfterTxFees.isLessThan(0)
     ) {
       newErrors.push(`${t('notEnoughAfter', { unit })}`);
     }
