@@ -11,7 +11,7 @@ export const NetworkList: Networks = {
   creditcoin: {
     name: 'creditcoin',
     endpoints: {
-      rpc: 'wss://rpc.mainnet.creditcoin.network/ws',
+      rpc: 'wss://mainnet.creditcoin.network/ws',
       lightClient: null,
     },
     namespace: '09573a3526818a8ecd6eb92f60f1175d',
