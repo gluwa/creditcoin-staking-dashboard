@@ -110,21 +110,6 @@ export const Networks = () => {
                 />
               </div>
             </div>
-            <div>
-              <ConnectionButton
-                $connected={isLightClient}
-                className="off"
-                type="button"
-                onClick={() => {
-                  setIsLightClient(true);
-                  switchNetwork(networkKey as NetworkName);
-                  setModalStatus('closing');
-                }}
-              >
-                <h3>{t('lightClient')}</h3>
-                {isLightClient && <h4 className="selected">{t('selected')}</h4>}
-              </ConnectionButton>
-            </div>
           </ConnectionsWrapper>
 
           {isBraveBrowser ? (
