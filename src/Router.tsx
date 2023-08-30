@@ -89,8 +89,13 @@ export const RouterInner = () => {
   // References to outer containers
   const mainInterfaceRef = useRef<HTMLDivElement>(null);
 
+  const reset = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallbackApp}>
+    <ErrorBoundary FallbackComponent={ErrorFallbackApp} onReset={reset}>
       <Body>
         {/* Help: closed by default */}
         <Help />
@@ -121,7 +126,10 @@ export const RouterInner = () => {
           {/* Fixed headers */}
           <Headers />
 
-          <ErrorBoundary FallbackComponent={ErrorFallbackRoutes}>
+          <ErrorBoundary
+            FallbackComponent={ErrorFallbackRoutes}
+            onReset={reset}
+          >
             <AnimatePresence>
               <Routes>
                 {PagesConfig.map((page, i) => {
