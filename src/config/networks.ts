@@ -17,7 +17,7 @@ export const NetworkList: Networks = {
             'Gluwa': 'wss://rpc.mainnet.creditcoin.network/ws',
         },
     },
-    namespace: '09573a3526818a8ecd6eb92f60f1175d',
+    namespace: 'creditcoin-mainnet',
     api: {
       unit: 'CTC',
       priceTicker: 'CTCUSDT',
