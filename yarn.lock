@@ -1458,16 +1458,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadotcloud/core-ui@npm:0.2.72":
-  version: 0.2.72
-  resolution: "@polkadotcloud/core-ui@npm:0.2.72"
+"@polkadotcloud/core-ui@npm:0.3.88":
+  version: 0.3.88
+  resolution: "@polkadotcloud/core-ui@npm:0.3.88"
   peerDependencies:
-    "@fortawesome/fontawesome-svg-core": ^6.4.0
+    "@fortawesome/fontawesome-svg-core": ^6.4.2
+    "@fortawesome/free-brands-svg-icons": ^6.4.2
+    "@fortawesome/free-regular-svg-icons": ^6.4.2
+    "@fortawesome/free-solid-svg-icons": ^6.4.2
     "@fortawesome/react-fontawesome": ^0.2.0
-    framer-motion: ^10.12.4
+    "@polkadotcloud/utils": ^0.2.22
+    framer-motion: ^10.15.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 6d5ad35bf177f4486049741c93b7a5c7799e8416469e13a5624ab4290cc8d398d2f53f5c09004011e29d42443e09ea94b75714943c1ab42cfc44facc1d83b972
+  checksum: 83e8fa8f87a59c39f9bc008c9de0e39b6869d9dfefc7c277aa303a796c2c03088e2238dcc72b31a22f46fcba451dc8cdc3fc9cba4a4fac51d0c2f7da5f322cfe
   languageName: node
   linkType: hard
 
@@ -6108,7 +6112,7 @@ __metadata:
     "@polkadot/react-qr": ^3.4.1
     "@polkadot/rpc-provider": ^10.7.3
     "@polkadot/util": ^12.3.2
-    "@polkadotcloud/core-ui": 0.2.72
+    "@polkadotcloud/core-ui": 0.3.88
     "@polkadotcloud/react-odometer": 0.1.17
     "@polkadotcloud/utils": 0.2.22
     "@substrate/connect": ^0.7.30
@@ -7501,11 +7505,11 @@ __metadata:
 
 "typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 21e88b0a0c0226f9cb9fd25b9626fb05b4c0f3fddac521844a13e1f30beb8f14e90bd409a9ac43c812c5946d714d6e0dee12d5d02dfc1c562c5aacfa1f49b606
+  checksum: f53bfe97f7c8b2b6d23cf572750d4e7d1e0c5fff1c36d859d0ec84556a827b8785077bc27676bf7e71fae538e517c3ecc0f37e7f593be913d884805d931bc8be
   languageName: node
   linkType: hard
 
