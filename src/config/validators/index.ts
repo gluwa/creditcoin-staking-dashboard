@@ -29,7 +29,7 @@ export const ValidatorCommunity = [
   {
     name: 'wi_ry_',
     thumbnail: 'Wiry',
-    bio: 'Creditcoin validators managed by someone involved in the project since day 1.',
+    bio: 'Creditcoin validators managed by someone involved in the project since day one',
     email: 'wi_ry_creditcoin@proton.me',
     twitter: '@wi-ry_',
     website: 'https://wi-ry.github.io',
