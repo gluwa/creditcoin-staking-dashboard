@@ -26,7 +26,7 @@ export const ValidatorCommunity = [
       ],
     },
   },
-    {
+  {
     name: 'Kessoku DAO',
     thumbnail: 'megumii',
     bio: '1 + 1 > 2',
