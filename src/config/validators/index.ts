@@ -46,7 +46,7 @@ export const ValidatorCommunity = [
     thumbnail: 'Wiry',
     bio: 'Creditcoin validators managed by someone involved in the project since day one',
     email: 'wi_ry_creditcoin@proton.me',
-    twitter: '@wi-ry_',
+    twitter: '@wi_ry_',
     website: 'https://wi-ry.github.io',
     validators: {
       creditcoin: [
