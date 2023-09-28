@@ -41,20 +41,4 @@ export const ValidatorCommunity = [
       creditcoinTest: [],
     },
   },
-  {
-    name: 'wi_ry_',
-    thumbnail: 'Wiry',
-    bio: 'Creditcoin validators managed by someone involved in the project since day one',
-    email: 'wi_ry_creditcoin@proton.me',
-    twitter: '@wi-ry_',
-    website: 'https://wi-ry.github.io',
-    validators: {
-      creditcoin: [
-        '5FnAR3NHuwaANAKEKRHn7prTkCLdesyhnxPe6d2gaqum96QW',
-        '5FbJ2BDjo2Edf3GYfKLErbPHdmNFRc8n88kFUBYVzsQPYRZv',
-        '5CzJ3wedCknprGEjMLcw6ZRmEUM6HhmjQe1zcF667srgZyxx',
-      ],
-      creditcoinTest: [],
-    },
-  },
 ];
