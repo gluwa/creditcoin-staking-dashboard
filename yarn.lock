@@ -6146,7 +6146,7 @@ __metadata:
     lodash.throttle: ^4.1.1
     prettier: ^2.8.8
     prettier-plugin-organize-imports: ^3.2.2
-    rc-slider: ^10.1.1
+    rc-slider: ^10.3.0
     react: ^18.2.0
     react-chartjs-2: ^5.2.0
     react-dom: ^18.2.0
@@ -6313,9 +6313,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rc-slider@npm:^10.1.1":
-  version: 10.1.1
-  resolution: "rc-slider@npm:10.1.1"
+"rc-slider@npm:^10.3.0":
+  version: 10.3.0
+  resolution: "rc-slider@npm:10.3.0"
   dependencies:
     "@babel/runtime": ^7.10.1
     classnames: ^2.2.5
@@ -6323,7 +6323,7 @@ __metadata:
   peerDependencies:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
-  checksum: 8df66142f1be00d31aaa45f3cf266fa30d03b70c74c734502389bbfacdb6741e149cd36dc1d3557d9dbb0194ed2733748366d888651d1120098338086419ba2c
+  checksum: 7e39f7d09429a7c5dd50f0f9ef6dcb29fbd89ddc835a928f6cd080723d2ccd962fc2858dc0ab9a3d347bcb8a94546599e6a604d2209435f93c04c5cb0ce79ac4
   languageName: node
   linkType: hard
 
@@ -7501,11 +7501,11 @@ __metadata:
 
 "typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
   version: 5.1.6
-  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 21e88b0a0c0226f9cb9fd25b9626fb05b4c0f3fddac521844a13e1f30beb8f14e90bd409a9ac43c812c5946d714d6e0dee12d5d02dfc1c562c5aacfa1f49b606
+  checksum: f53bfe97f7c8b2b6d23cf572750d4e7d1e0c5fff1c36d859d0ec84556a827b8785077bc27676bf7e71fae538e517c3ecc0f37e7f593be913d884805d931bc8be
   languageName: node
   linkType: hard
 
