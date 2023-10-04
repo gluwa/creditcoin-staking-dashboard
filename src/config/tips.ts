@@ -11,11 +11,11 @@ export const TipsConfig = [
     s: 2,
     page: 'nominate',
   },
-  // {
-  // id: 'recommendedJoinPool',
-  // s: 3,
-  // page: 'pools',
-  // },
+  {
+    id: 'recommendedJoinPool',
+    s: 3,
+    page: 'pools',
+  },
   {
     id: 'howToStake',
     s: 4,
