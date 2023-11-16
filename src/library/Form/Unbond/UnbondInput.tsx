@@ -46,10 +46,11 @@ export const UnbondInput = ({
 
   // apply bond to parent setters.
   const updateParentState = (val: any) => {
+    const bond = val.toString();
     for (const s of setters) {
       s.set({
         ...s.current,
-        bond: val,
+        bond,
       });
     }
   };
