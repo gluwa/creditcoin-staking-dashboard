@@ -155,23 +155,6 @@ export const SideMenu = () => {
         >
           <LanguageSVG width="1.25em" height="1.25em" />
         </button>
-        {mode === 'dark' ? (
-          <button
-            type="button"
-            onClick={() => toggleTheme()}
-            aria-label="aria-label"
-          >
-            <SunnyOutlineSVG width="1.25em" height="1.25em" />
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={() => toggleTheme()}
-            aria-label="Toggle"
-          >
-            <MoonOutlineSVG width="1.1em" height="1.1em" />
-          </button>
-        )}
       </section>
     </Wrapper>
   );
