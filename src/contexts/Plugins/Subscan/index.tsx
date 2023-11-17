@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ApiEndpoints,
-  ApiSubscanKey,
   DefaultLocale,
   ListItemsPerPage,
 } from 'consts';
@@ -173,6 +172,13 @@ export const SubscanProvider = ({
         }
       }
     }
+
+    // sort payouts by block_timestamp
+    // FIXME: the payouts should already be correctly sorted when fetched from Subscan but for some reason they are not.
+    newClaimedPayouts.sort((a, b) => b.block_timestamp - a.block_timestamp);
+
+    newUnclaimedPayouts.sort((a, b) => b.block_timestamp - a.block_timestamp);
+
     return {
       newClaimedPayouts,
       newUnclaimedPayouts,
@@ -235,7 +241,7 @@ export const SubscanProvider = ({
       address,
     });
 
-    if (res.message === 'Success') {
+    if (res.message.toLowerCase() === 'success') {
       if (pluginEnabled('subscan')) {
         if (res.data?.list !== null) {
           const list = [];
@@ -269,7 +275,6 @@ export const SubscanProvider = ({
       {
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': ApiSubscanKey,
         },
         body: JSON.stringify({
           pool_id: poolId,
@@ -336,7 +341,6 @@ export const SubscanProvider = ({
     const res: Response = await fetch(subscanEndpoint + endpoint, {
       headers: {
         'Content-Type': 'application/json',
-        'X-API-Key': ApiSubscanKey,
       },
       body: JSON.stringify(bodyJson),
       method: 'POST',
