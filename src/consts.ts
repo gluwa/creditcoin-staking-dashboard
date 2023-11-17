@@ -36,7 +36,6 @@ export const TipsThresholdMedium = 1200;
 export const PluginsList: Plugin[] = [
   'subscan',
   'tips',
-  'polkawatch',
 ];
 
 /*
