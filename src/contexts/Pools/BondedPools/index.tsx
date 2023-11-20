@@ -1,8 +1,8 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import { setStateWithRef, shuffle } from '@polkadot-cloud/utils';
 import { u8aToString, u8aUnwrapBytes } from '@polkadot/util';
-import { setStateWithRef, shuffle } from '@polkadotcloud/utils';
 import type {
   BondedPool,
   BondedPoolsContextState,

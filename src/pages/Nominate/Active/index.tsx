@@ -8,7 +8,7 @@ import {
   PageRow,
   PageTitle,
   RowSection,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useBonded } from 'contexts/Bonded';
 import { useConnect } from 'contexts/Connect';
 import { useHelp } from 'contexts/Help';

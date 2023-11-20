@@ -6,7 +6,7 @@ import {
   ActionItem,
   ButtonSubmitInvert,
   ModalWarnings,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';
 import { useModal } from 'contexts/Modal';

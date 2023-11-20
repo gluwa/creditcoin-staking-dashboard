@@ -6,7 +6,7 @@ import {
   ButtonHelp,
   ButtonSecondary,
   ModalCustomHeader,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useLedgerHardware } from 'contexts/Hardware/Ledger';
 import { useHelp } from 'contexts/Help';
 import { useModal } from 'contexts/Modal';

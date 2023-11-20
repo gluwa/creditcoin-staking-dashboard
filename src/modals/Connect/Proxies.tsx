@@ -11,7 +11,7 @@ import {
   ButtonHelp,
   ButtonMonoInvert,
   ButtonSecondary,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import { useHelp } from 'contexts/Help';
 import { useProxies } from 'contexts/Proxies';

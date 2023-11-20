@@ -5,7 +5,7 @@ import {
   faArrowAltCircleUp,
   faSquarePen,
 } from '@fortawesome/free-solid-svg-icons';
-import { ButtonSubmit } from '@polkadotcloud/core-ui';
+import { ButtonSubmit } from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import { useOverlay } from 'contexts/Overlay';
 import { useTxMeta } from 'contexts/TxMeta';

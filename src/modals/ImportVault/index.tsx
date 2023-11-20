@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faQrcode } from '@fortawesome/free-solid-svg-icons';
-import { ButtonPrimary, ButtonText } from '@polkadotcloud/core-ui';
-import { capitalizeFirstLetter } from '@polkadotcloud/utils';
+import { ButtonPrimary, ButtonText } from '@polkadot-cloud/react';
+import { capitalizeFirstLetter } from '@polkadot-cloud/utils';
 import { useApi } from 'contexts/Api';
 import { useVaultHardware } from 'contexts/Hardware/Vault';
 import { useModal } from 'contexts/Modal';

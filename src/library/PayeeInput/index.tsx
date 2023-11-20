@@ -3,7 +3,7 @@
 
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { isValidAddress, remToUnit } from '@polkadotcloud/utils';
+import { isValidAddress, remToUnit } from '@polkadot-cloud/utils';
 import { useBonded } from 'contexts/Bonded';
 import { useConnect } from 'contexts/Connect';
 import { Identicon } from 'library/Identicon';

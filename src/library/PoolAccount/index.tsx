@@ -1,8 +1,8 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import { ellipsisFn, remToUnit } from '@polkadot-cloud/utils';
 import { u8aToString, u8aUnwrapBytes } from '@polkadot/util';
-import { clipAddress, remToUnit } from '@polkadotcloud/utils';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';
 import { useBondedPools } from 'contexts/Pools/BondedPools';
@@ -57,7 +57,7 @@ export const PoolAccount = ({
   const syncing = metaData === undefined;
 
   // display value
-  const defaultDisplay = clipAddress(pool.addresses.stash);
+  const defaultDisplay = ellipsisFn(pool.addresses.stash);
   let display = syncing ? t('syncing') : metaData ?? defaultDisplay;
 
   // check if super identity has been byte encoded

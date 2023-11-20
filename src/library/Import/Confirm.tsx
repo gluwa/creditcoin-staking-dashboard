@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-live authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { ButtonMono, ButtonMonoInvert } from '@polkadotcloud/core-ui';
+import { ButtonMono, ButtonMonoInvert } from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import { useOverlay } from 'contexts/Overlay';
 import { Identicon } from 'library/Identicon';

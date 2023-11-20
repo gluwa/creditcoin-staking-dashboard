@@ -1,12 +1,8 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import {
-  ActionItem,
-  ModalPadding,
-  ModalWarnings,
-} from '@polkadotcloud/core-ui';
-import { planckToUnit } from '@polkadotcloud/utils';
+import { ActionItem, ModalPadding, ModalWarnings } from '@polkadot-cloud/react';
+import { planckToUnit } from '@polkadot-cloud/utils';
 import { useApi } from 'contexts/Api';
 import { useBalances } from 'contexts/Balances';
 import { useBonded } from 'contexts/Bonded';

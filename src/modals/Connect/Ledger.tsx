@@ -7,8 +7,8 @@ import {
   ButtonHelp,
   ButtonPrimaryInvert,
   ButtonText,
-} from '@polkadotcloud/core-ui';
-import { inChrome } from '@polkadotcloud/utils';
+} from '@polkadot-cloud/react';
+import { inChrome } from '@polkadot-cloud/utils';
 import { useApi } from 'contexts/Api';
 import { useHelp } from 'contexts/Help';
 import { useModal } from 'contexts/Modal';

@@ -6,8 +6,8 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ButtonPrimary, ButtonSecondary } from '@polkadot-cloud/react';
 import { QrDisplayPayload, QrScanSignature } from '@polkadot/react-qr';
-import { ButtonPrimary, ButtonSecondary } from '@polkadotcloud/core-ui';
 import { useOverlay } from 'contexts/Overlay';
 import { useTxMeta } from 'contexts/TxMeta';
 import { QRVieweraWrapper } from 'library/Import/Wrappers';

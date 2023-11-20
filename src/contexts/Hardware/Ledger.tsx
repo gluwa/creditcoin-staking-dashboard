@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import TransportWebHID from '@ledgerhq/hw-transport-webhid';
+import { localStorageOrDefault, setStateWithRef } from '@polkadot-cloud/utils';
 import { u8aToBuffer } from '@polkadot/util';
-import { localStorageOrDefault, setStateWithRef } from '@polkadotcloud/utils';
 import { newSubstrateApp } from '@zondax/ledger-substrate';
 import { useApi } from 'contexts/Api';
 import type { LedgerAccount } from 'contexts/Connect/types';

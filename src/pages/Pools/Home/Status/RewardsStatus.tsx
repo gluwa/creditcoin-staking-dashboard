@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faPlus, faShare } from '@fortawesome/free-solid-svg-icons';
-import { planckToUnit } from '@polkadotcloud/utils';
+import { planckToUnit } from '@polkadot-cloud/utils';
 import BigNumber from 'bignumber.js';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';

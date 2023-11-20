@@ -5,7 +5,7 @@ import {
   ButtonHelp,
   ButtonMonoInvert,
   ButtonPrimaryInvert,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useHelp } from 'contexts/Help';
 import { useModal } from 'contexts/Modal';
 import { useTranslation } from 'react-i18next';

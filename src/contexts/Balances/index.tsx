@@ -1,14 +1,14 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { VoidFn } from '@polkadot/api/types';
 import {
   addedTo,
   matchedProperties,
   removedFrom,
   rmCommas,
   setStateWithRef,
-} from '@polkadotcloud/utils';
+} from '@polkadot-cloud/utils';
+import type { VoidFn } from '@polkadot/api/types';
 import BigNumber from 'bignumber.js';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';

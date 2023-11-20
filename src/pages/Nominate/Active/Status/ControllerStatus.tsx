@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { clipAddress } from '@polkadotcloud/utils';
+import { ellipsisFn } from '@polkadot-cloud/utils';
 import { useBonded } from 'contexts/Bonded';
 import { useConnect } from 'contexts/Connect';
 import { Stat } from 'library/Stat';
@@ -21,7 +21,7 @@ export const ControllerStatus = () => {
         controller
           ? {
               address: controller,
-              display: getAccount(controller)?.name || clipAddress(controller),
+              display: getAccount(controller)?.name || ellipsisFn(controller),
             }
           : `${t('nominate.none')}`
       }

@@ -8,8 +8,8 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ButtonMono, ButtonText } from '@polkadotcloud/core-ui';
-import { clipAddress, unescape } from '@polkadotcloud/utils';
+import { ButtonMono, ButtonText } from '@polkadot-cloud/react';
+import { ellipsisFn, unescape } from '@polkadot-cloud/utils';
 import { useConnect } from 'contexts/Connect';
 import { useOverlay } from 'contexts/Overlay';
 import { Identicon } from 'library/Identicon';
@@ -51,7 +51,7 @@ export const Address = ({
   const commitEdit = () => {
     let newName = editName;
     if (editName === '') {
-      newName = clipAddress(address);
+      newName = ellipsisFn(address);
     }
     setName(newName);
     setEditName(newName);

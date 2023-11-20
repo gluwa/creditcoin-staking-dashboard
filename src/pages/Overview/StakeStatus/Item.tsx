@@ -3,8 +3,8 @@
 
 import { faChevronRight, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ButtonPrimaryInvert } from '@polkadotcloud/core-ui';
-import { applyWidthAsPadding } from '@polkadotcloud/utils';
+import { ButtonPrimaryInvert } from '@polkadot-cloud/react';
+import { applyWidthAsPadding } from '@polkadot-cloud/utils';
 import { useEffect, useLayoutEffect, useRef } from 'react';
 import { StatusRowWrapper } from './Wrappers';
 import type { ItemProps } from './types';

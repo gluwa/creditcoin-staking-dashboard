@@ -7,7 +7,7 @@ import {
   faCheck,
   faFilterCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
-import { ButtonPrimaryInvert, ButtonSecondary } from '@polkadotcloud/core-ui';
+import { ButtonPrimaryInvert, ButtonSecondary } from '@polkadot-cloud/react';
 import { useFilters } from 'contexts/Filters';
 import { useOverlay } from 'contexts/Overlay';
 import { Container } from 'library/Filter/Container';

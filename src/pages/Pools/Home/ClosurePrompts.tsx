@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faLockOpen } from '@fortawesome/free-solid-svg-icons';
-import { ButtonPrimary, ButtonRow, PageRow } from '@polkadotcloud/core-ui';
+import { ButtonPrimary, ButtonRow, PageRow } from '@polkadot-cloud/react';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';
 import { useModal } from 'contexts/Modal';

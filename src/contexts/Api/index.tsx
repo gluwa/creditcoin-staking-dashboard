@@ -1,13 +1,13 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { ApiPromise, WsProvider } from '@polkadot/api';
-import { ScProvider } from '@polkadot/rpc-provider/substrate-connect';
 import {
   extractUrlValue,
   makeCancelable,
   rmCommas,
-} from '@polkadotcloud/utils';
+} from '@polkadot-cloud/utils';
+import { ApiPromise, WsProvider } from '@polkadot/api';
+import { ScProvider } from '@polkadot/rpc-provider/substrate-connect';
 import BigNumber from 'bignumber.js';
 import { NetworkList } from 'config/networks';
 import {

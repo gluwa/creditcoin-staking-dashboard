@@ -7,7 +7,7 @@ import {
   ButtonHelp,
   ButtonSubmitInvert,
   ModalWarnings,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import BigNumber from 'bignumber.js';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';

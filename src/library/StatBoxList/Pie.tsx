@@ -1,8 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { ButtonHelp } from '@polkadotcloud/core-ui';
-import { ReactOdometer } from '@polkadotcloud/react-odometer';
+import { ButtonHelp, Odometer } from '@polkadot-cloud/react';
 import { useHelp } from 'contexts/Help';
 import { StatPie } from 'library/Graphs/StatBoxPie';
 import { useEffect, useState } from 'react';
@@ -40,13 +39,13 @@ export const Pie = ({ label, stat, graph, tooltip, helpKey }: PieProps) => {
 
         <div className="labels">
           <h3>
-            <ReactOdometer duration={150} value={values.value} />
+            <Odometer duration={150} value={values.value} />
             {stat?.unit && <>{stat?.unit}</>}
 
             {showTotal ? (
               <span className="total">
                 /&nbsp;
-                <ReactOdometer duration={150} value={values.total} />
+                <Odometer duration={150} value={values.total} />
                 {stat?.unit ? (
                   <>
                     &nbsp;

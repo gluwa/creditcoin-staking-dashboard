@@ -1,8 +1,8 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import { localStorageOrDefault } from '@polkadot-cloud/utils';
 import Keyring from '@polkadot/keyring';
-import { localStorageOrDefault } from '@polkadotcloud/utils';
 import type { ExtensionAccount } from 'contexts/Extensions/types';
 import type { Network } from 'types';
 import type { ExternalAccount } from './types';

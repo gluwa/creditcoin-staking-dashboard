@@ -7,8 +7,8 @@ import {
   PageHeading,
   PageRow,
   PageTitle,
-} from '@polkadotcloud/core-ui';
-import { extractUrlValue, removeVarFromUrlHash } from '@polkadotcloud/utils';
+} from '@polkadot-cloud/react';
+import { extractUrlValue, removeVarFromUrlHash } from '@polkadot-cloud/utils';
 import { useConnect } from 'contexts/Connect';
 import { useSetup } from 'contexts/Setup';
 import { CardWrapper } from 'library/Graphs/Wrappers';

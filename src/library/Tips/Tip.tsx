@@ -5,7 +5,7 @@ import {
   ButtonPrimary,
   ButtonPrimaryInvert,
   ButtonSecondary,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useOverlay } from 'contexts/Overlay';
 import { usePlugins } from 'contexts/Plugins';
 import { Title } from 'library/Overlay/Title';

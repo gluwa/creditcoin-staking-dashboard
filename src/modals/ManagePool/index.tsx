@@ -5,7 +5,7 @@ import {
   ModalFixedTitle,
   ModalMotionTwoSection,
   ModalSection,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useModal } from 'contexts/Modal';
 import { useActivePools } from 'contexts/Pools/ActivePools';
 import { Title } from 'library/Modal/Title';

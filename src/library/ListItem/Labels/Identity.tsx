@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { clipAddress } from '@polkadotcloud/utils';
+import { ellipsisFn } from '@polkadot-cloud/utils';
 import { useValidators } from 'contexts/Validators';
 import { Identicon } from 'library/Identicon';
 import { IdentityWrapper } from 'library/ListItem/Wrappers';
@@ -44,7 +44,7 @@ export const Identity = ({ address, batchKey, batchIndex }: IdentityProps) => {
         {synced.identities && display !== null ? (
           <h4>{display}</h4>
         ) : (
-          <h4>{clipAddress(address)}</h4>
+          <h4>{ellipsisFn(address)}</h4>
         )}
       </div>
     </IdentityWrapper>

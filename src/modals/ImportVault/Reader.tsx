@@ -1,9 +1,9 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+import { ButtonPrimary, ButtonSecondary } from '@polkadot-cloud/react';
+import { ellipsisFn, isValidAddress } from '@polkadot-cloud/utils';
 import { QrScanSignature } from '@polkadot/react-qr';
-import { ButtonPrimary, ButtonSecondary } from '@polkadotcloud/core-ui';
-import { clipAddress, isValidAddress } from '@polkadotcloud/utils';
 import { useConnect } from 'contexts/Connect';
 import { useVaultHardware } from 'contexts/Hardware/Vault';
 import { useOverlay } from 'contexts/Overlay';
@@ -70,7 +70,7 @@ export const Reader = () => {
           {isValidAddress(qrData) && !formatAccountSs58(qrData) ? (
             <>
               <Identicon value={qrData} size={22} />
-              {clipAddress(qrData)}
+              {ellipsisFn(qrData)}
             </>
           ) : (
             '...'

@@ -3,7 +3,7 @@
 
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ModalPadding } from '@polkadotcloud/core-ui';
+import { ModalPadding } from '@polkadot-cloud/react';
 import { useModal } from 'contexts/Modal';
 import { Title } from 'library/Modal/Title';
 import { useTranslation } from 'react-i18next';

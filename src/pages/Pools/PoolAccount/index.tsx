@@ -3,7 +3,7 @@
 
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { clipAddress, remToUnit } from '@polkadotcloud/utils';
+import { ellipsisFn, remToUnit } from '@polkadot-cloud/utils';
 import { useIdentities } from 'contexts/Identities';
 import { useNotifications } from 'contexts/Notifications';
 import type { NotificationText } from 'contexts/Notifications/types';
@@ -66,7 +66,7 @@ export const PoolAccount = ({
             <div className="icon">
               <Identicon value={address} size={remToUnit('1.6rem')} />
             </div>
-            <h4>{clipAddress(address)}</h4>
+            <h4>{ellipsisFn(address)}</h4>
           </>
         )}
         <div>

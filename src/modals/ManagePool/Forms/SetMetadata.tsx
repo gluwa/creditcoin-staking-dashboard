@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { ButtonSubmitInvert, ModalWarnings } from '@polkadot-cloud/react';
 import { u8aToString, u8aUnwrapBytes } from '@polkadot/util';
-import { ButtonSubmitInvert, ModalWarnings } from '@polkadotcloud/core-ui';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';
 import { useModal } from 'contexts/Modal';

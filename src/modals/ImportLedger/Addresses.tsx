@@ -2,8 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { ButtonText } from '@polkadotcloud/core-ui';
-import { clipAddress, unescape } from '@polkadotcloud/utils';
+import { ButtonText } from '@polkadot-cloud/react';
+import { ellipsisFn, unescape } from '@polkadot-cloud/utils';
 import { useApi } from 'contexts/Api';
 import { useLedgerHardware } from 'contexts/Hardware/Ledger';
 import { getLedgerApp, getLocalLedgerAddresses } from 'contexts/Hardware/Utils';
@@ -39,7 +39,7 @@ export const Addresess = ({ addresses, handleLedgerLoop }: AnyJson) => {
               );
               return localAddress?.name
                 ? unescape(localAddress.name)
-                : clipAddress(address);
+                : ellipsisFn(address);
             })();
 
             return (

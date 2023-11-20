@@ -3,8 +3,8 @@
 
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ButtonSecondary } from '@polkadotcloud/core-ui';
-import { isValidAddress } from '@polkadotcloud/utils';
+import { ButtonSecondary } from '@polkadot-cloud/react';
+import { isValidAddress } from '@polkadot-cloud/utils';
 import { useConnect } from 'contexts/Connect';
 import { useModal } from 'contexts/Modal';
 import { Identicon } from 'library/Identicon';

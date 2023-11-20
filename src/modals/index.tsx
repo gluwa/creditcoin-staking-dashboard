@@ -5,7 +5,7 @@ import {
   ModalBackground,
   ModalContainer,
   ModalHeight,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useModal } from 'contexts/Modal';
 import { useAnimation } from 'framer-motion';
 import { ErrorFallbackModal } from 'library/ErrorBoundary';

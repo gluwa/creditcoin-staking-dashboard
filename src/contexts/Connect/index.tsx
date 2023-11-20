@@ -1,13 +1,13 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { VoidFn } from '@polkadot/api/types';
-import Keyring from '@polkadot/keyring';
 import {
-  clipAddress,
+  ellipsisFn,
   localStorageOrDefault,
   setStateWithRef,
-} from '@polkadotcloud/utils';
+} from '@polkadot-cloud/utils';
+import type { VoidFn } from '@polkadot/api/types';
+import Keyring from '@polkadot/keyring';
 import { DappName } from 'consts';
 import { useApi } from 'contexts/Api';
 import type {
@@ -512,7 +512,7 @@ export const ConnectProvider = ({
     const newAccount = {
       address: formatted,
       network: network.name,
-      name: clipAddress(address),
+      name: ellipsisFn(address),
       source: 'external',
       addedBy,
     };

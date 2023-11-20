@@ -1,16 +1,16 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { VoidFn } from '@polkadot/api/types';
 import {
   addedTo,
-  clipAddress,
+  ellipsisFn,
   localStorageOrDefault,
   matchedProperties,
   removedFrom,
   rmCommas,
   setStateWithRef,
-} from '@polkadotcloud/utils';
+} from '@polkadot-cloud/utils';
+import type { VoidFn } from '@polkadot/api/types';
 import BigNumber from 'bignumber.js';
 import { isSupportedProxy } from 'config/proxies';
 import { useApi } from 'contexts/Api';
@@ -150,7 +150,7 @@ export const ProxiesProvider = ({
       .filter(({ proxyType }) => isSupportedProxy(proxyType))
       .map(({ delegator, proxyType }) => ({
         address: delegator,
-        name: clipAddress(delegator),
+        name: ellipsisFn(delegator),
         proxyType,
       }));
     return proxiedAccounts;

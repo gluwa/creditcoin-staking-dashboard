@@ -7,7 +7,7 @@ import {
   PageHeading,
   PageRow,
   PageTitle,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import { useSetup } from 'contexts/Setup';
 import { CardWrapper } from 'library/Graphs/Wrappers';

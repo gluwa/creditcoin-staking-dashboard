@@ -6,7 +6,7 @@ import {
   ButtonHelp,
   ButtonPrimaryInvert,
   ButtonText,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useHelp } from 'contexts/Help';
 import { useModal } from 'contexts/Modal';
 import { ReactComponent as VaultSVG } from 'img/polkadotVault.svg';

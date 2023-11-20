@@ -5,7 +5,7 @@ import {
   faArrowAltCircleUp,
   faSquarePen,
 } from '@fortawesome/free-solid-svg-icons';
-import { ButtonHelp, ButtonSubmit } from '@polkadotcloud/core-ui';
+import { ButtonHelp, ButtonSubmit } from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import type { LedgerAccount } from 'contexts/Connect/types';
 import { useLedgerHardware } from 'contexts/Hardware/Ledger';

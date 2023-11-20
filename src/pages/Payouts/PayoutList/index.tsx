@@ -3,7 +3,7 @@
 
 import { faBars, faGripVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { clipAddress, isNotZero, planckToUnit } from '@polkadotcloud/utils';
+import { ellipsisFn, isNotZero, planckToUnit } from '@polkadot-cloud/utils';
 import BigNumber from 'bignumber.js';
 import { DefaultLocale, ListItemsPerBatch, ListItemsPerPage } from 'consts';
 import { useApi } from 'contexts/Api';
@@ -219,7 +219,7 @@ export const PayoutListInner = ({
                                   batchKey={batchKey}
                                 />
                               ) : (
-                                <div>{clipAddress(p.validator_stash)}</div>
+                                <div>{ellipsisFn(p.validator_stash)}</div>
                               )}
                             </>
                           )}

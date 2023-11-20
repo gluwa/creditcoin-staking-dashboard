@@ -11,7 +11,7 @@ import {
   ButtonHelp,
   ButtonMonoInvert,
   ButtonSecondary,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useConnect } from 'contexts/Connect';
 import type { ExternalAccount } from 'contexts/Connect/types';
 import { useHelp } from 'contexts/Help';

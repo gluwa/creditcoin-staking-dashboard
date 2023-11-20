@@ -5,7 +5,7 @@ import {
   capitalizeFirstLetter,
   planckToUnit,
   rmCommas,
-} from '@polkadotcloud/utils';
+} from '@polkadot-cloud/utils';
 import BigNumber from 'bignumber.js';
 import { useApi } from 'contexts/Api';
 import { useBondedPools } from 'contexts/Pools/BondedPools';

@@ -1,7 +1,7 @@
 // Copyright 2023 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { ButtonHelp, PageRow, PageTitle } from '@polkadotcloud/core-ui';
+import { ButtonHelp, PageRow, PageTitle } from '@polkadot-cloud/react';
 import { MaxPayoutDays } from 'consts';
 import { useHelp } from 'contexts/Help';
 import { usePlugins } from 'contexts/Plugins';

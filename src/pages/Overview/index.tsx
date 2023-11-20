@@ -6,8 +6,8 @@ import {
   PageRow,
   PageTitle,
   RowSection,
-} from '@polkadotcloud/core-ui';
-import { planckToUnit } from '@polkadotcloud/utils';
+} from '@polkadot-cloud/react';
+import { planckToUnit } from '@polkadot-cloud/utils';
 import BigNumber from 'bignumber.js';
 import { DefaultLocale } from 'consts';
 import { useApi } from 'contexts/Api';

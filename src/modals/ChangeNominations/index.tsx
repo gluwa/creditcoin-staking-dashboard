@@ -5,7 +5,7 @@ import {
   ModalPadding,
   ModalSeparator,
   ModalWarnings,
-} from '@polkadotcloud/core-ui';
+} from '@polkadot-cloud/react';
 import { useApi } from 'contexts/Api';
 import { useBonded } from 'contexts/Bonded';
 import { useConnect } from 'contexts/Connect';

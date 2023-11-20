@@ -1,7 +1,7 @@
 // Copyright 2022 @paritytech/polkadot-native authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { clipAddress, setStateWithRef } from '@polkadotcloud/utils';
+import { ellipsisFn, setStateWithRef } from '@polkadot-cloud/utils';
 import { useApi } from 'contexts/Api';
 import { useLedgerHardware } from 'contexts/Hardware/Ledger';
 import { getLocalLedgerAddresses } from 'contexts/Hardware/Utils';
@@ -105,7 +105,7 @@ export const ImportLedger: React.FC = () => {
         index: options.accountIndex,
         pubKey,
         address,
-        name: clipAddress(address),
+        name: ellipsisFn(address),
         network: network.name,
       }));
 

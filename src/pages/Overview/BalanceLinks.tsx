@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { ButtonPrimaryInvert, Separator } from '@polkadotcloud/core-ui';
+import { ButtonPrimaryInvert, Separator } from '@polkadot-cloud/react';
 import { useApi } from 'contexts/Api';
 import { useConnect } from 'contexts/Connect';
 import { useTranslation } from 'react-i18next';

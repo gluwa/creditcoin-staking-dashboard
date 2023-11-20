@@ -6,8 +6,8 @@ import {
   faExclamationTriangle,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ButtonPrimary, PageRow } from '@polkadot-cloud/react';
 import { stringUpperFirst } from '@polkadot/util';
-import { ButtonPrimary, PageRow } from '@polkadotcloud/core-ui';
 import { useApi } from 'contexts/Api';
 import { useBonded } from 'contexts/Bonded';
 import { useConnect } from 'contexts/Connect';
