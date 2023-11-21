@@ -35,7 +35,7 @@ export type LedgerHardwareContextInterface = {
 
 export interface FeedbackMessage {
   message: MaybeString;
-  helpKey?: MaybeString;
+  helpKey: MaybeString;
 }
 
 export type LedgerStatusCode =
