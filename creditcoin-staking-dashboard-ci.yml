@@ -4,6 +4,8 @@ trigger:
     include:
       - main
       - dev
+      - dev-cc3
+      - 'upstream-main-*'
       - release/*
       - feature/*
       - project/*

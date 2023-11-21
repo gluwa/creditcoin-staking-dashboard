@@ -5,7 +5,7 @@ name: MegaLinter
 
 on:
   pull_request:
-    branches: [dev]
+    branches: [dev, dev-cc3]
 
 permissions: read-all
 
