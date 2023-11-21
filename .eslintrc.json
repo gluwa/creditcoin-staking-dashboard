@@ -30,6 +30,7 @@
   ],
   "rules": {
     "import/order": "off",
+    "jsx-a11y/control-has-associated-label": "off",
     "react/require-default-props": "off",
     "react/no-access-state-in-setstate": "off",
     "react/destructuring-assignment": "off",
