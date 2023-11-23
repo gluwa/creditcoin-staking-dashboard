@@ -3,6 +3,7 @@
 
 import { DefaultParams } from 'consts';
 import CreditcoinIconSVG from 'img/ic_creditcoin.svg?react';
+import CreditcoinTokenSVG from 'img/ic_creditcoin.svg?react';
 import CreditcoinLogoSVG from 'img/logo_creditcoin.svg?react';
 
 import type { Networks } from 'types';
@@ -30,6 +31,7 @@ export const NetworkList: Networks = {
     units: 18,
     brand: {
       icon: CreditcoinIconSVG,
+      token: CreditcoinTokenSVG,
       logo: {
         svg: CreditcoinLogoSVG,
         width: '7.2em',
@@ -85,6 +87,7 @@ export const NetworkList: Networks = {
     units: 18,
     brand: {
       icon: CreditcoinIconSVG,
+      token: CreditcoinTokenSVG,
       logo: {
         svg: CreditcoinLogoSVG,
         width: '7.2em',
@@ -140,6 +143,7 @@ export const NetworkList: Networks = {
     units: 18,
     brand: {
       icon: CreditcoinIconSVG,
+      token: CreditcoinTokenSVG,
       logo: {
         svg: CreditcoinLogoSVG,
         width: '7.2em',
