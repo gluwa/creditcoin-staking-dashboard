@@ -8,12 +8,12 @@ import { Payouts } from 'pages/Payouts';
 import { Pools } from 'pages/Pools';
 import { Validators } from 'pages/Validators';
 import type { PageCategoryItems, PagesConfigItems } from 'types';
-import { ReactComponent as CommunityIcon } from '../img/ic_community.svg';
-import { ReactComponent as NominateIcon } from '../img/ic_nominate.svg';
-import { ReactComponent as OverviewIcon } from '../img/ic_overview.svg';
-import { ReactComponent as PayoutsIcon } from '../img/ic_payouts.svg';
-import { ReactComponent as PoolsIcon } from '../img/ic_pools.svg';
-import { ReactComponent as ValidatorsIcon } from '../img/ic_validators.svg';
+import CommunityIcon from '../img/ic_community.svg?react';
+import NominateIcon from '../img/ic_nominate.svg?react';
+import OverviewIcon from '../img/ic_overview.svg?react';
+import PayoutsIcon from '../img/ic_payouts.svg?react';
+import PoolsIcon from '../img/ic_pools.svg?react';
+import ValidatorsIcon from '../img/ic_validators.svg?react';
 
 const BASE_URL = import.meta.env.BASE_URL;
 export const PageCategories: PageCategoryItems = [
