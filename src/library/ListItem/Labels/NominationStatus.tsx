@@ -28,11 +28,13 @@ export const NominationStatus = ({
   // determine staked amount
   let stakedAmount = new BigNumber(0);
   if (bondFor === 'nominator') {
-    const isActive = nominationStatus === 'active';
-    const stake = activeAccountOwnStake.find((x) => x.address === address);
-    if (isActive && stake && stake.value) {
-      stakedAmount = new BigNumber(stake.value);
-    }
+    // bonded amount within the validator.
+    stakedAmount =
+      status === 'active'
+        ? new BigNumber(
+            activeAccountOwnStake?.find((own) => own.address)?.value ?? 0
+          )
+        : new BigNumber(0);
   } else {
     const staker = stakers?.find((s) => s.address === address);
     const exists = (staker?.others || []).find(({ who }) => who === nominator);
@@ -40,6 +42,7 @@ export const NominationStatus = ({
       stakedAmount = planckToUnit(new BigNumber(exists.value), units);
     }
   }
+
   return (
     <ValidatorStatusWrapper $status={status || 'waiting'} $noMargin={noMargin}>
       <h5>
