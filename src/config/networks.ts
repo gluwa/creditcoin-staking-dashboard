@@ -64,6 +64,7 @@ export const NetworkList: Networks = {
       },
     },
     subscanEndpoint: 'http://127.0.0.1:4399',
+    defaultFeeReserve: 0.1,
   },
   creditcoinTest: {
     name: 'creditcoinTest',
@@ -120,6 +121,7 @@ export const NetworkList: Networks = {
       },
     },
     subscanEndpoint: 'https://subscan-testnet.creditcoin.network/',
+    defaultFeeReserve: 0.1,
   },
   creditcoinDev: {
     name: 'creditcoinDev',
@@ -176,5 +178,6 @@ export const NetworkList: Networks = {
       },
     },
     subscanEndpoint: 'http://127.0.0.1:4399',
+    defaultFeeReserve: 0.1,
   },
 };
