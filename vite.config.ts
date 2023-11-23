@@ -38,4 +38,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react/jsx-runtime'],
   },
+  resolve: {
+    preserveSymlinks: true,
+  },
 });
