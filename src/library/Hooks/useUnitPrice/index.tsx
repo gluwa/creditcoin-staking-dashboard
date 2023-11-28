@@ -11,7 +11,7 @@ export const useUnitPrice = () => {
     return {
       lastPrice: '0',
       change: '0',
-    }
+    };
   };
 
   const { network } = useNetwork();

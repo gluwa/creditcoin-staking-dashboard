@@ -17,7 +17,7 @@ export const ThemedRouter = () => {
         // FIXME: the @polkadotcloud/core-ui package only includes polkadot, westend, and kusama
         // we'll have to figure out a way to theme it for other networks
       }
-      <Entry mode={ mode } theme="polkadot-relay">
+      <Entry mode={mode} theme="polkadot-relay">
         <Router />
       </Entry>
     </ThemeProvider>

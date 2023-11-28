@@ -33,10 +33,7 @@ export const TipsThresholdMedium = 1200;
 /*
  * Available plugins
  */
-export const PluginsList: Plugin[] = [
-  'subscan',
-  'tips',
-];
+export const PluginsList: Plugin[] = ['subscan', 'tips'];
 
 /*
  * Fallback config values

@@ -5,11 +5,7 @@ import { isNotZero } from '@polkadot-cloud/utils';
 import { format, fromUnixTime } from 'date-fns';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  ApiEndpoints,
-  DefaultLocale,
-  ListItemsPerPage,
-} from 'consts';
+import { ApiEndpoints, DefaultLocale, ListItemsPerPage } from 'consts';
 import { useNetworkMetrics } from 'contexts/NetworkMetrics';
 import { sortNonZeroPayouts } from 'library/Graphs/Utils';
 import { useErasToTimeLeft } from 'library/Hooks/useErasToTimeLeft';

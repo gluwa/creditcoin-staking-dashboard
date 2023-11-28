@@ -16,8 +16,6 @@ import { useHelp } from 'contexts/Help';
 import { useUi } from 'contexts/UI';
 import type { UIContextInterface } from 'contexts/UI/types';
 import CogOutlineSVG from 'img/cog-outline.svg?react';
-import ForumSVG from 'img/forum.svg?react';
-import InfoSVG from 'img/info.svg?react';
 import LogoGithubSVG from 'img/logo-github.svg?react';
 import { useOutsideAlerter } from 'library/Hooks';
 import { useOverlay } from '@polkadot-cloud/react/hooks';
@@ -67,8 +65,8 @@ export const SideMenu = () => {
     apiStatus === 'connecting'
       ? 'warning'
       : apiStatus === 'connected'
-      ? 'success'
-      : 'danger';
+        ? 'success'
+        : 'danger';
 
   return (
     <Wrapper ref={ref} $minimised={sideMenuMinimised}>
