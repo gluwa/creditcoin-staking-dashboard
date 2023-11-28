@@ -62,9 +62,9 @@ export const MaxPayoutDays = 60;
 export const EndpointPrice = 'https://api.binance.com/api/v3';
 export const ApiEndpoints = {
   priceChange: `${EndpointPrice}/ticker/24hr?symbol=`,
-  subscanRewardSlash: '/api/plugin/staking/rewardsSlashes',
-  subscanPoolRewards: '/api/plugin/staking/poolRewards',
-  subscanEraStat: '/api/plugin/staking/eraStat',
+  subscanRewardSlash: '/api/v2/scan/account/reward_slash',
+  subscanPoolRewards: '/api/scan/nomination_pool/rewards',
+  subscanEraStat: '/api/scan/staking/era_stat',
 };
 
 /*
