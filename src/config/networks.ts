@@ -58,7 +58,7 @@ export const NetworkList: Networks = {
         dark: '#9fccaa',
       },
     },
-    subscanEndpoint: 'https://subscan-mainnet.creditcoin.network/',
+    subscanEndpoint: 'https://subscan-mainnet.creditcoin.network',
   },
   creditcoinTest: {
     name: 'creditcoinTest',
@@ -110,7 +110,7 @@ export const NetworkList: Networks = {
         dark: '#9fccaa',
       },
     },
-    subscanEndpoint: 'https://subscan-testnet.creditcoin.network/',
+    subscanEndpoint: 'https://subscan-testnet.creditcoin.network',
   },
   // creditcoinDev: {
   //   name: 'creditcoinDev',
