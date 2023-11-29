@@ -3,6 +3,8 @@
 
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useApi } from 'contexts/Api';
+import { useConnect } from 'contexts/Connect';
 import { usePlugins } from 'contexts/Plugins';
 import styled from 'styled-components';
 
@@ -19,19 +21,36 @@ const Wrapper = styled.div<{ active: boolean }>`
       : 'var(--text-color-secondary)'};
   opacity: ${(props) => (props.active ? 1 : 0.5)};
   z-index: 2;
+  > a {
+    color: var(--network-color-primary);
+  }
 `;
 
 export const SubscanButton = () => {
   const { plugins } = usePlugins();
+  const { activeAccount } = useConnect();
+  const { subscanUrl } = useApi().network;
+
+  const isSubscanActive = activeAccount !== null && plugins.includes('subscan');
 
   return (
-    <Wrapper active={plugins.includes('subscan')}>
+    <Wrapper active={isSubscanActive}>
       <FontAwesomeIcon
         icon={faProjectDiagram}
         transform="shrink-2"
         style={{ marginRight: '0.3rem' }}
       />
-      Subscan
+      {isSubscanActive ? (
+        <a
+          href={`${subscanUrl}/account/${activeAccount}`}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          Subscan
+        </a>
+      ) : (
+        <span>Subscan</span>
+      )}
     </Wrapper>
   );
 };
