@@ -129,6 +129,19 @@ export const Tasks = forwardRef(({ setSection, setTask }: any, ref: any) => {
             </ButtonOption>
           </>
         )}
+        {isMember() && !isDepositor() && active?.isGreaterThan(0) && (
+          <ButtonOption
+            onClick={() => {
+              setSection(1);
+              setTask('leave_pool');
+            }}
+          >
+            <div>
+              <h3>{t('leavePool')}</h3>
+              <p>{t('unbondFundsLeavePool')}</p>
+            </div>
+          </ButtonOption>
+        )}
       </div>
     </ContentWrapper>
   );
