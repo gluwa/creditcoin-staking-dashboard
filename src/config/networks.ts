@@ -59,6 +59,7 @@ export const NetworkList: Networks = {
       },
     },
     subscanEndpoint: 'https://subscan-mainnet.creditcoin.network',
+    subscanUrl: 'https://creditcoin.subscan.io/',
   },
   creditcoinTest: {
     name: 'creditcoinTest',
@@ -111,6 +112,7 @@ export const NetworkList: Networks = {
       },
     },
     subscanEndpoint: 'https://subscan-testnet.creditcoin.network',
+    subscanUrl: 'https://creditcoin-testnet.subscan.io/',
   },
   // creditcoinDev: {
   //   name: 'creditcoinDev',
