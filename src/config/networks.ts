@@ -14,6 +14,7 @@ type NetworkConfig = {
   endpoints: Network['endpoints'];
   namespace?: string;
   subscanEndpoint: string;
+  oldSubstrate?: boolean;
 };
 
 const makeCreditcoinNetwork = ({
@@ -21,13 +22,14 @@ const makeCreditcoinNetwork = ({
   endpoints,
   namespace,
   subscanEndpoint,
+  oldSubstrate,
 }: NetworkConfig): Network => {
   return {
     name,
     endpoints,
     namespace: namespace ?? '09573a3526818a8ecd6eb92f60f1175d',
     subscanEndpoint,
-
+    oldSubstrate: oldSubstrate ?? false,
     api: {
       unit: 'CTC',
       priceTicker: 'CTCUSDT',
@@ -89,6 +91,7 @@ const makeNetworkList = () => {
       },
       namespace: 'creditcoin-mainnet',
       subscanEndpoint: 'http://127.0.0.1:4399',
+      oldSubstrate: true,
     }),
     creditcoinTest: makeCreditcoinNetwork({
       name: 'creditcoinTest',
@@ -101,6 +104,7 @@ const makeNetworkList = () => {
       },
       namespace: '09573a3526818a8ecd6eb92f60f1175d',
       subscanEndpoint: 'https://subscan-testnet.creditcoin.network/',
+      oldSubstrate: true,
     }),
     creditcoinDev: makeCreditcoinNetwork({
       name: 'creditcoinDev',
@@ -113,6 +117,7 @@ const makeNetworkList = () => {
       },
       namespace: '09573a3526818a8ecd6eb92f60f1175d',
       subscanEndpoint: 'http://127.0.0.1:4399',
+      oldSubstrate: true,
     }),
   };
   if (import.meta.env.DEV) {

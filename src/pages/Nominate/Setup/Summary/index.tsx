@@ -25,7 +25,7 @@ export const Summary = ({ section }: SetupStepProps) => {
   const { t } = useTranslation('pages');
   const { api } = useApi();
   const {
-    networkData: { units, unit },
+    networkData: { units, unit, oldSubstrate },
   } = useNetwork();
   const { newBatchCall } = useBatchCall();
   const { getPayeeItems } = usePayeeConfig();
@@ -59,10 +59,20 @@ export const Summary = ({ section }: SetupStepProps) => {
     }
     const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toFixed();
 
-    const txs = [
-      api.tx.staking.bond(bondAsString, payeeToSubmit),
-      api.tx.staking.nominate(targetsToSubmit),
-    ];
+    let bondTx;
+    if (oldSubstrate) {
+      const controllerToSubmit = {
+        Id: activeAccount,
+      };
+      bondTx = api.tx.staking.bond(
+        controllerToSubmit,
+        bondAsString,
+        payeeToSubmit
+      );
+    } else {
+      bondTx = api.tx.staking.bond(bondAsString, payeeToSubmit);
+    }
+    const txs = [bondTx, api.tx.staking.nominate(targetsToSubmit)];
     return newBatchCall(txs, activeAccount);
   };
 

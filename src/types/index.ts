@@ -66,6 +66,7 @@ export interface Network {
   };
   params: Record<string, number>;
   defaultFeeReserve: number;
+  oldSubstrate: boolean;
 }
 
 export interface PageCategory {

@@ -122,7 +122,7 @@ export const PoolsConfigProvider = ({
               minCreateBond: new BigNumber(minCreateBond.toString()),
               minJoinBond: new BigNumber(minJoinBond.toString()),
               globalMaxCommission: Number(
-                globalMaxCommission.toHuman().slice(0, -1)
+                globalMaxCommission?.toHuman()?.slice(0, -1) ?? 1 // if unset, the max is 100%
               ),
             },
           },

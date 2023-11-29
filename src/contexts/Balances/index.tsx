@@ -37,7 +37,7 @@ export const BalancesProvider = ({
   children: React.ReactNode;
 }) => {
   const { api, isReady } = useApi();
-  const { network } = useNetwork();
+  const { network, networkData } = useNetwork();
   const { accounts, getAccount } = useImportedAccounts();
   const { addOrReplaceOtherAccount } = useOtherAccounts();
   const { addExternalAccount } = useExternalAccounts();
@@ -141,13 +141,21 @@ export const BalancesProvider = ({
 
         const handleAccount = () => {
           const free = new BigNumber(accountData.free.toString());
+          let frozen;
+          if (networkData.oldSubstrate) {
+            frozen = new BigNumber(accountData.miscFrozen.toString()).plus(
+              new BigNumber(accountData.feeFrozen.toString())
+            );
+          } else {
+            frozen = new BigNumber(accountData.frozen.toString());
+          }
           const newBalances: Balances = {
             address,
             nonce: nonce.toNumber(),
             balance: {
               free,
               reserved: new BigNumber(accountData.reserved.toString()),
-              frozen: new BigNumber(accountData.frozen.toString()),
+              frozen,
             },
             locks: locks.toHuman().map((l: AnyApi) => ({
               ...l,
