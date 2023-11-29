@@ -55,7 +55,7 @@ export const Summary = ({ section }: SetupStepProps) => {
 
     const bondToSubmit = unitToPlanck(bond, units);
     if (bondToSubmit.isNegative()) {
-      return;
+      return undefined;
     }
     const bondAsString = bondToSubmit.isNaN() ? '0' : bondToSubmit.toFixed();
 

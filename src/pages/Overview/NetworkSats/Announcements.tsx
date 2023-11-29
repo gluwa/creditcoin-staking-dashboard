@@ -23,7 +23,7 @@ import { Item } from './Wrappers';
 
 export const Announcements = () => {
   const { t } = useTranslation('pages');
-  const { isPoolSyncing, isSyncing } = useUi();
+  const { isSyncing } = useUi();
   const { staking } = useStaking();
   const { stats } = usePoolsConfig();
   const {

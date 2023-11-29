@@ -46,7 +46,7 @@ export const PagesConfig: PagesConfigItems = [
     uri: `${BASE_URL}pools`,
     hash: '/pools',
     Entry: Pools,
-    icon: () => (<PoolsIcon height={'12.6'} width={'12.6'}/>)
+    icon: () => <PoolsIcon height={'12.6'} width={'12.6'} />,
   },
   {
     category: 2,

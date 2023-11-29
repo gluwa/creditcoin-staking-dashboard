@@ -6,20 +6,14 @@ import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useActivePools } from 'contexts/Pools/ActivePools';
 import { usePoolsConfig } from 'contexts/Pools/PoolsConfig';
-import { useTransferOptions } from 'contexts/TransferOptions';
 import { Warning } from 'library/Form/Warning';
-import { useActiveAccounts } from 'contexts/ActiveAccounts';
 import { ContentWrapper } from './Wrappers';
 
 export const Tasks = forwardRef(({ setSection, setTask }: any, ref: any) => {
   const { t } = useTranslation('modals');
-  const { activeAccount } = useActiveAccounts();
-  const { selectedActivePool, isOwner, isBouncer, isMember, isDepositor } =
-    useActivePools();
-  const { getTransferOptions } = useTransferOptions();
+  const { selectedActivePool, isOwner, isBouncer } = useActivePools();
   const { stats } = usePoolsConfig();
   const { globalMaxCommission } = stats;
-  const { active } = getTransferOptions(activeAccount).pool;
 
   const poolLocked = selectedActivePool?.bondedPool?.state === 'Blocked';
   const poolDestroying = selectedActivePool?.bondedPool?.state === 'Destroying';

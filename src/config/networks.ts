@@ -3,20 +3,21 @@
 
 import { DefaultParams } from 'consts';
 import CreditcoinIconSVG from 'img/ic_creditcoin.svg?react';
-import CreditcoinTokenSVG from 'img/ic_creditcoin.svg?react';
 import CreditcoinLogoSVG from 'img/logo_creditcoin.svg?react';
 
 import type { Networks } from 'types';
+
+const CreditcoinTokenSVG = CreditcoinIconSVG;
 
 export const NetworkList: Networks = {
   creditcoin: {
     name: 'creditcoin',
     endpoints: {
-        lightClient: null,
-        defaultRpcEndpoint: 'Gluwa',
-        rpcEndpoints: {
-            'Gluwa': 'wss://rpc.mainnet.creditcoin.network/ws',
-        },
+      lightClient: null,
+      defaultRpcEndpoint: 'Gluwa',
+      rpcEndpoints: {
+        Gluwa: 'wss://rpc.mainnet.creditcoin.network/ws',
+      },
     },
     namespace: 'creditcoin-mainnet',
     api: {
@@ -69,11 +70,11 @@ export const NetworkList: Networks = {
   creditcoinTest: {
     name: 'creditcoinTest',
     endpoints: {
-        lightClient: null,
-        defaultRpcEndpoint: 'Gluwa',
-        rpcEndpoints: {
-            'Gluwa': 'wss://rpc.testnet.creditcoin.network/ws',
-        },
+      lightClient: null,
+      defaultRpcEndpoint: 'Gluwa',
+      rpcEndpoints: {
+        Gluwa: 'wss://rpc.testnet.creditcoin.network/ws',
+      },
     },
     namespace: '09573a3526818a8ecd6eb92f60f1175d',
     api: {
@@ -126,11 +127,11 @@ export const NetworkList: Networks = {
   creditcoinDev: {
     name: 'creditcoinDev',
     endpoints: {
-        lightClient: null,
-        defaultRpcEndpoint: 'Gluwa',
-        rpcEndpoints: {
-            'Gluwa': 'wss://rpc.devnet.creditcoin.network/ws',
-        },
+      lightClient: null,
+      defaultRpcEndpoint: 'Gluwa',
+      rpcEndpoints: {
+        Gluwa: 'wss://rpc.devnet.creditcoin.network/ws',
+      },
     },
     namespace: '09573a3526818a8ecd6eb92f60f1175d',
     api: {

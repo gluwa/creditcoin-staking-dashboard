@@ -92,18 +92,10 @@ export const useFetchMehods = () => {
     let waiting = Object.assign(validators);
 
     // filter validators to find waiting candidates
-    waiting = applyFilter(
-      null,
-      [],
-      waiting
-    );
+    waiting = applyFilter(null, [], waiting);
 
     // filter validators to find active candidates
-    active = applyFilter(
-      ['active'],
-      [],
-      active
-    );
+    active = applyFilter(['active'], [], active);
 
     // keep validators that are in upper 50% performance quartile.
     active = active.filter((a: Validator) => {
@@ -120,29 +112,19 @@ export const useFetchMehods = () => {
       active = shuffle(active).slice(0, 14);
     }
 
-    return shuffle([
-      ...new Set(waiting.concat(active)),
-    ]);
+    return shuffle([...new Set(waiting.concat(active))]);
   };
 
   const available = (nominations: Validator[]) => {
     const all = Object.assign(validators);
 
     const parachainActive =
-      applyFilter(
-        ['active'],
-        ['not_parachain_validator'],
-        all
-      ).filter(
+      applyFilter(['active'], ['not_parachain_validator'], all).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
       ) || [];
 
     const active =
-      applyFilter(
-        ['active'],
-        [],
-        all
-      ).filter(
+      applyFilter(['active'], [], all).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
       ) || [];
 
@@ -152,11 +134,7 @@ export const useFetchMehods = () => {
     });
 
     const random =
-      applyFilter(
-        null,
-        [],
-        all
-      ).filter(
+      applyFilter(null, [], all).filter(
         (n: Validator) => !nominations.find((o) => o.address === n.address)
       ) || [];
 
