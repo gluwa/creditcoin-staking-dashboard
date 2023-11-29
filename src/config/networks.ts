@@ -3,10 +3,11 @@
 
 import { DefaultParams } from 'consts';
 import CreditcoinIconSVG from 'img/ic_creditcoin.svg?react';
-import CreditcoinTokenSVG from 'img/ic_creditcoin.svg?react';
 import CreditcoinLogoSVG from 'img/logo_creditcoin.svg?react';
 
 import type { Networks } from 'types';
+
+const CreditcoinTokenSVG = CreditcoinIconSVG;
 
 export const NetworkList: Networks = {
   creditcoin: {
