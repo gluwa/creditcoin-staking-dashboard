@@ -39,7 +39,6 @@ export const ValidatorMetrics = () => {
   const validatorInEra =
     stakers.find((s: any) => s.address === address) || null;
 
-  console.log('validatorInEra', validatorInEra);
   let validatorOwnStake = new BigNumber(0);
   let otherStake = new BigNumber(0);
   if (validatorInEra) {
