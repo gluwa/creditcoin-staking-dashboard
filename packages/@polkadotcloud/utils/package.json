@@ -1,0 +1,16 @@
+{
+  "name": "@polkadotcloud/utils",
+  "license": "Apache-2.0",
+  "version": "0.2.22",
+  "author": "Ross Bulat",
+  "description": "Utilities for Polkadot Dashboards.",
+  "peerDependencies": {
+    "@polkadot/keyring": "^11.0.1",
+    "@polkadot/util": "^11.0.1",
+    "bignumber.js": "^9.1.1"
+  },
+  "types": "index.d.ts",
+  "main": "index.ts",
+  "module": "index.ts",
+  "typescript": { "definition": "index.d.ts" }
+}

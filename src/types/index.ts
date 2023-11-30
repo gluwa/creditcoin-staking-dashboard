@@ -25,6 +25,7 @@ export interface Network {
   namespace: string;
   colors: Record<NetworkColor, { [key in Theme]: string }>;
   subscanEndpoint: string;
+  subscanUrl: string;
   unit: string;
   units: number;
   ss58: number;
