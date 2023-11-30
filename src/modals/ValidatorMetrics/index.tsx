@@ -108,7 +108,9 @@ export const ValidatorMetrics = () => {
         className="body"
         style={{ position: 'relative', marginTop: '0.5rem' }}
       >
-        <SubscanButton validatorAddress={validatorInEra.address} />
+        {validatorInEra?.address && (
+          <SubscanButton validatorAddress={validatorInEra?.address} />
+        )}
         <GraphWrapper
           style={{
             margin: '0 1.5rem 0 0.5rem',
