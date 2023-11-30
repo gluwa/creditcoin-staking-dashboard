@@ -26,12 +26,13 @@ const Wrapper = styled.div<{ active: boolean }>`
   }
 `;
 
-export const SubscanButton = ({ isValidatorLink = false }) => {
+export const SubscanButton = ({ validatorAddress = '' }) => {
   const { plugins } = usePlugins();
   const { activeAccount } = useConnect();
   const { subscanUrl } = useApi().network;
   const isSubscanActive = activeAccount !== null && plugins.includes('subscan');
-  const subscanTypeName = isValidatorLink ? 'validator' : 'account';
+  const subscanTypeName = validatorAddress ? 'validator' : 'account';
+  const address = validatorAddress || activeAccount;
 
   return (
     <Wrapper active={isSubscanActive}>
@@ -42,7 +43,7 @@ export const SubscanButton = ({ isValidatorLink = false }) => {
       />
       {isSubscanActive ? (
         <a
-          href={`${subscanUrl}/${subscanTypeName}/${activeAccount}`}
+          href={`${subscanUrl}/${subscanTypeName}/${address}`}
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
