@@ -39,6 +39,7 @@ export const ValidatorMetrics = () => {
   const validatorInEra =
     stakers.find((s: any) => s.address === address) || null;
 
+  console.log('validatorInEra', validatorInEra);
   let validatorOwnStake = new BigNumber(0);
   let otherStake = new BigNumber(0);
   if (validatorInEra) {
@@ -108,7 +109,7 @@ export const ValidatorMetrics = () => {
         className="body"
         style={{ position: 'relative', marginTop: '0.5rem' }}
       >
-        <SubscanButton isValidatorLink />
+        <SubscanButton validatorAddress={validatorInEra.address} />
         <GraphWrapper
           style={{
             margin: '0 1.5rem 0 0.5rem',
