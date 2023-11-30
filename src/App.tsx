@@ -11,7 +11,7 @@ import { I18nextProvider } from 'react-i18next';
 export const App: React.FC = () => {
   let network = localStorage.getItem('network');
 
-  console.log('Version 1.0.1');
+  console.log('Version 1.1.0');
 
   if (network === null) {
     network = DefaultNetwork;
