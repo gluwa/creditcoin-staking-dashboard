@@ -19,7 +19,7 @@ import type { AnyJson } from 'types';
 import { Items } from './Items';
 import { PageToggle } from './PageToggle';
 import { Syncing } from './Syncing';
-import { TipsWrapper } from './Wrappers';
+import { NoTipsWrapper, TipsWrapper } from './Wrappers';
 
 export const Tips = () => {
   const { i18n, t } = useTranslation();
@@ -151,6 +151,10 @@ export const Tips = () => {
       ['title', 'subtitle', 'description']
     );
   });
+
+  if (items.length === 0) {
+    return <NoTipsWrapper>&nbsp;</NoTipsWrapper>;
+  }
 
   // determine items to be displayed
   const end = isNetworkSyncing
