@@ -5,6 +5,14 @@ import { SideMenuStickyThreshold, SmallFontSizeMaxWidth } from 'consts';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
+export const NoTipsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 0rem 0.75rem 0rem 1rem;
+  margin-bottom: 0rem;
+`;
+
 export const TipsWrapper = styled.div`
   width: 100%;
   display: flex;
