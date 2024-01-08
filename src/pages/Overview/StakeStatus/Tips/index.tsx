@@ -104,7 +104,7 @@ export const Tips = () => {
   const pageRef = useRef(page);
 
   const _itemsPerPage = itemsPerPageRef.current;
-  const _page = pageRef.current;
+  const _page = pageRef.current <= 0 ? 1 : pageRef.current;
 
   // accumulate segments to include in tips
   const segments: AnyJson = [];
