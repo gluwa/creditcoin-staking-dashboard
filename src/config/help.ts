@@ -22,7 +22,11 @@ export const HelpConfig: HelpItems = [
       'Proxy Accounts',
     ],
     external: [
-      ['creditcoinDocs', 'https://docs.creditcoin.org', 'docs.creditcoin.org'],
+      [
+        'creditcoinDocs',
+        'https://docs.creditcoin.org/v/cc2',
+        'docs.creditcoin.org',
+      ],
     ],
   },
   {
