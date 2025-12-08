@@ -1081,10 +1081,8 @@
     tslib "^2.6.2"
     ws "^8.14.2"
 
-"@polkadotcloud/core-ui@0.2.72":
+"@polkadotcloud/core-ui@file:./packages/@polkadotcloud/core-ui":
   version "0.2.72"
-  resolved "https://registry.yarnpkg.com/@polkadotcloud/core-ui/-/core-ui-0.2.72.tgz#4585ed522a0e6e07da94e29c773a04daa4cb166d"
-  integrity sha512-iDd8bqDyMW6iMrE693iwOlgzq/GjwIg1sacOMXUI0DApgd2ai84K9ooWKnrWvQLCD4Gb85t/WYODRbrQ6OLVXg==
 
 "@polkadotcloud/react-odometer@file:./packages/@polkadotcloud/react-odometer":
   version "0.1.16"

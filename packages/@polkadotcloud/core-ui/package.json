@@ -1,0 +1,18 @@
+{
+  "name": "@polkadotcloud/core-ui",
+  "license": "Apache-2.0",
+  "version": "0.2.72",
+  "author": "Ross Bulat",
+  "description": "Core UI Components for Polkadot Dashboards.",
+  "peerDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "framer-motion": "^10.12.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "types": "index.d.ts",
+  "main": "index.tsx",
+  "module": "index.tsx",
+  "typescript": { "definition": "index.d.ts" }
+}
