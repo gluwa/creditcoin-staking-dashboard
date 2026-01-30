@@ -4,7 +4,7 @@
 
 #### Production:
 
-https://staking.creditcoin.org
+https://cc-enterprise-staking.creditcoin.org
 
 ## Validator Operator Setup Guide
 
